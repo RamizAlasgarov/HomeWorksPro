@@ -44,7 +44,7 @@ public class Employee {
                 '}';
     }
 
-    public void calculateBonus(){
+    public double calculateBonus(){
         return salary *= 0.05;
     }
 }
