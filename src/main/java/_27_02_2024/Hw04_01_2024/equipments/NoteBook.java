@@ -8,7 +8,7 @@ import lombok.ToString;
  * batteryLife, screenSize, operatingSystem, isTouchscreen.
  */
 
-@ToString
+
 public class NoteBook extends OfficeEquipment {
   private String processorType;
   private int ramSize;
@@ -40,5 +40,79 @@ public class NoteBook extends OfficeEquipment {
     this.screenSize = screenSize;
     this.operatingSystem = operatingSystem;
     this.isTouchscreen = isTouchscreen;
+  }
+
+  public String getProcessorType() {
+    return processorType;
+  }
+
+  public void setProcessorType(String processorType) {
+    this.processorType = processorType;
+  }
+
+  public int getRamSize() {
+    return ramSize;
+  }
+
+  public void setRamSize(int ramSize) {
+    this.ramSize = ramSize;
+  }
+
+  public double getStorageSize() {
+    return storageSize;
+  }
+
+  public void setStorageSize(double storageSize) {
+    this.storageSize = storageSize;
+  }
+
+  public int getBatteryLife() {
+    return batteryLife;
+  }
+
+  public void setBatteryLife(int batteryLife) {
+    this.batteryLife = batteryLife;
+  }
+
+  public int getScreenSize() {
+    return screenSize;
+  }
+
+  public void setScreenSize(int screenSize) {
+    this.screenSize = screenSize;
+  }
+
+  public String getOperatingSystem() {
+    return operatingSystem;
+  }
+
+  public void setOperatingSystem(String operatingSystem) {
+    this.operatingSystem = operatingSystem;
+  }
+
+  public boolean isTouchscreen() {
+    return isTouchscreen;
+  }
+
+  public void setTouchscreen(boolean touchscreen) {
+    isTouchscreen = touchscreen;
+  }
+
+  @Override
+  public String toString() {
+    return "NoteBook{" +
+            "processorType='" + processorType + '\'' +
+            ", ramSize=" + ramSize +
+            ", storageSize=" + storageSize +
+            ", batteryLife=" + batteryLife +
+            ", screenSize=" + screenSize +
+            ", operatingSystem='" + operatingSystem + '\'' +
+            ", isTouchscreen=" + isTouchscreen +
+            ", manufacture='" + manufacture + '\'' +
+            ", yearOfManufacture=" + yearOfManufacture +
+            ", price=" + price +
+            ", weight=" + weight +
+            ", isOperational=" + isOperational +
+            '}';
   }
 }

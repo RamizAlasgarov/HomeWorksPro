@@ -8,7 +8,7 @@ import lombok.ToString;
  * maxPaperSize, connectivity, isDuplexScanning, scannerType.
  */
 
-@ToString
+
 public class Scanner extends OfficeEquipment{
     private int scanResolution;
     private int scanSpeed;
@@ -40,5 +40,79 @@ public class Scanner extends OfficeEquipment{
         this.connectivity = connectivity;
         this.isDuplexScanning = isDuplexScanning;
         this.scannerType = scannerType;
+    }
+
+    public int getScanResolution() {
+        return scanResolution;
+    }
+
+    public void setScanResolution(int scanResolution) {
+        this.scanResolution = scanResolution;
+    }
+
+    public int getScanSpeed() {
+        return scanSpeed;
+    }
+
+    public void setScanSpeed(int scanSpeed) {
+        this.scanSpeed = scanSpeed;
+    }
+
+    public String getColorType() {
+        return colorType;
+    }
+
+    public void setColorType(String colorType) {
+        this.colorType = colorType;
+    }
+
+    public double getMaxPaperSize() {
+        return maxPaperSize;
+    }
+
+    public void setMaxPaperSize(double maxPaperSize) {
+        this.maxPaperSize = maxPaperSize;
+    }
+
+    public String getConnectivity() {
+        return connectivity;
+    }
+
+    public void setConnectivity(String connectivity) {
+        this.connectivity = connectivity;
+    }
+
+    public boolean isDuplexScanning() {
+        return isDuplexScanning;
+    }
+
+    public void setDuplexScanning(boolean duplexScanning) {
+        isDuplexScanning = duplexScanning;
+    }
+
+    public String getScannerType() {
+        return scannerType;
+    }
+
+    public void setScannerType(String scannerType) {
+        this.scannerType = scannerType;
+    }
+
+    @Override
+    public String toString() {
+        return "Scanner{" +
+                "scanResolution=" + scanResolution +
+                ", scanSpeed=" + scanSpeed +
+                ", colorType='" + colorType + '\'' +
+                ", maxPaperSize=" + maxPaperSize +
+                ", connectivity='" + connectivity + '\'' +
+                ", isDuplexScanning=" + isDuplexScanning +
+                ", scannerType='" + scannerType + '\'' +
+                ", manufacture='" + manufacture + '\'' +
+                ", yearOfManufacture=" + yearOfManufacture +
+                ", price=" + price +
+                ", weight=" + weight +
+                ", isOperational=" + isOperational +
+                '}';
     }
 }

@@ -5,23 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db0000be-4ec7-4c6d-b107-22acd68e76f5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/TryMethods/AllMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/creating/CreateAllInformationInArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Monitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/NoteBook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/OfficeEquipment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Phone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Printer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Projector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Router.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Scanner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Switch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Tablet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/calling/LauchFuntionality.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/task2/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/task2/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/task2/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/task2/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/TryMethods/AllMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/TryMethods/AllMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/creating/CreateAllInformationInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/creating/CreateAllInformationInArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Monitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Monitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/NoteBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/NoteBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/OfficeEquipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/OfficeEquipment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Phone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Printer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Projector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Projector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Router.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Scanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Switch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Switch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Tablet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Tablet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711549511082</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=".">
+      <created>1711974126031</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711974126031</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

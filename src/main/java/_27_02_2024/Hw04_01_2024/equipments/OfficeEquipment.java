@@ -5,20 +5,17 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-/**
- *
- */
-
 
 @ToString
 public class OfficeEquipment {
     private Number id;
     private String modelName;
-    String manufacture;
+    String manufacture ;
     int yearOfManufacture;
     int price;
     int weight;
     boolean isOperational;
+
 
     public OfficeEquipment(int id, String modelName,
                            String manufacture,
@@ -34,4 +31,49 @@ public class OfficeEquipment {
         this.weight = weight;
         this.isOperational = isOperational;
     }
+
+
+
+    public int getPrice() {
+        return price;
+    }
+
+    public int getYearOfManufacture() {
+        return yearOfManufacture;
+    }
+
+    public Number getId() {
+        return id;
+    }
+
+
+    public String getModelName() {
+        return modelName;
+    }
+
+    public String getManufacture() {
+        return manufacture;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public boolean isOperational() {
+        return isOperational;
+    }
+
+
+    //    @Override
+//    public String toString() {
+//        return "OfficeEquipment{" +
+//                "id=" + id +
+//                ", modelName='" + modelName + '\'' +
+//                ", manufacture='" + manufacture + '\'' +
+//                ", yearOfManufacture=" + yearOfManufacture +
+//                ", price=" + price +
+//                ", weight=" + weight +
+//                ", isOperational=" + isOperational +
+//                '}';
+//    }
 }

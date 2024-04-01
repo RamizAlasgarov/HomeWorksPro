@@ -15,12 +15,44 @@ import java.util.Arrays;
  */
 public class AllMethods {
 
-    public void printAllEquipment(OfficeEquipment[] officeEquipments){
-for (OfficeEquipment o : officeEquipments){
-    System.out.println(o);
-}
-
-
+    public void printAllEquipment(OfficeEquipment[] officeEquipments) {
+        for (OfficeEquipment o : officeEquipments) {
+            System.out.println(o);
+        }
     }
+    public int calculateTotalPrice(OfficeEquipment[] officeEquipments){
+        int totalPirce = 0;
+        for (OfficeEquipment o : officeEquipments){
+            totalPirce += o.getPrice();
+        }
+        return totalPirce;
+    }
+    public void listByManufacturer(OfficeEquipment[] officeEquipment, String manufacturer){
+        for (OfficeEquipment o : officeEquipment){
+            if(manufacturer == o.getManufacture()){
+                System.out.println(o.getId() + o.getManufacture() + o.getWeight() + o.getYearOfManufacture()+
+                         o.getModelName() + o.getYearOfManufacture() + o.getPrice() + o.isOperational());
+            }
+        }
+    }
+    public void findOldestEquipment(OfficeEquipment[] officeEquipments){
+        int year = Integer.MAX_VALUE;
+        for (OfficeEquipment o : officeEquipments){
+            if(o.getYearOfManufacture()<= year){
+                year = o.getYearOfManufacture() ;
+            }
+        }
+        System.out.println("oldest equipment by year of manufacture = " + year);
+    }
+    public int countOperational(OfficeEquipment[] officeEquipment){
+        int counter = 0;
+        for (OfficeEquipment o : officeEquipment){
+            if(o.isOperational() == true){
+                counter++;
+            }
+        }
+        return counter;
+    }
+
 
 }

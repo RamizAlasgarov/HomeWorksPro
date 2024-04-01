@@ -9,7 +9,7 @@ import lombok.ToString;
  */
 
 
-@ToString
+
 public class Printer extends OfficeEquipment {
     private String printTechnology;
     private double printSpeed;
@@ -40,5 +40,79 @@ public class Printer extends OfficeEquipment {
         this.paperSize = paperSize;
         this.connectivity = connectivity;
         this.dutyCycle = dutyCycle;
+    }
+
+    public String getPrintTechnology() {
+        return printTechnology;
+    }
+
+    public void setPrintTechnology(String printTechnology) {
+        this.printTechnology = printTechnology;
+    }
+
+    public double getPrintSpeed() {
+        return printSpeed;
+    }
+
+    public void setPrintSpeed(double printSpeed) {
+        this.printSpeed = printSpeed;
+    }
+
+    public double getMaxResolution() {
+        return maxResolution;
+    }
+
+    public void setMaxResolution(double maxResolution) {
+        this.maxResolution = maxResolution;
+    }
+
+    public boolean isColor() {
+        return isColor;
+    }
+
+    public void setColor(boolean color) {
+        isColor = color;
+    }
+
+    public int getPaperSize() {
+        return paperSize;
+    }
+
+    public void setPaperSize(int paperSize) {
+        this.paperSize = paperSize;
+    }
+
+    public String getConnectivity() {
+        return connectivity;
+    }
+
+    public void setConnectivity(String connectivity) {
+        this.connectivity = connectivity;
+    }
+
+    public double getDutyCycle() {
+        return dutyCycle;
+    }
+
+    public void setDutyCycle(double dutyCycle) {
+        this.dutyCycle = dutyCycle;
+    }
+
+    @Override
+    public String toString() {
+        return "Printer{" +
+                "printTechnology='" + printTechnology + '\'' +
+                ", printSpeed=" + printSpeed +
+                ", maxResolution=" + maxResolution +
+                ", isColor=" + isColor +
+                ", paperSize=" + paperSize +
+                ", connectivity='" + connectivity + '\'' +
+                ", dutyCycle=" + dutyCycle +
+                ", manufacture='" + manufacture + '\'' +
+                ", yearOfManufacture=" + yearOfManufacture +
+                ", price=" + price +
+                ", weight=" + weight +
+                ", isOperational=" + isOperational +
+                '}';
     }
 }

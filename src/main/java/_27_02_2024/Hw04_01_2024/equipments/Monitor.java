@@ -1,6 +1,6 @@
 package _27_02_2024.Hw04_01_2024.equipments;
 
-import lombok.ToString;
+
 
 /**
  * Класс Monitor (Монитор) - наследуется от OfficeEquipment.
@@ -8,7 +8,7 @@ import lombok.ToString;
  * refreshRate, isCurved, ports, isHDR.
  */
 
-@ToString
+
 public class Monitor extends OfficeEquipment{
     private int screenSize;
     private int resolution;
@@ -38,5 +38,79 @@ public class Monitor extends OfficeEquipment{
         this.isCurved = isCurved;
         this.ports = ports;
         this.isHDR = isHDR;
+    }
+
+    public int getScreenSize() {
+        return screenSize;
+    }
+
+    public void setScreenSize(int screenSize) {
+        this.screenSize = screenSize;
+    }
+
+    public int getResolution() {
+        return resolution;
+    }
+
+    public void setResolution(int resolution) {
+        this.resolution = resolution;
+    }
+
+    public String getPanelType() {
+        return panelType;
+    }
+
+    public void setPanelType(String panelType) {
+        this.panelType = panelType;
+    }
+
+    public int getRefreshRate() {
+        return refreshRate;
+    }
+
+    public void setRefreshRate(int refreshRate) {
+        this.refreshRate = refreshRate;
+    }
+
+    public boolean isCurved() {
+        return isCurved;
+    }
+
+    public void setCurved(boolean curved) {
+        isCurved = curved;
+    }
+
+    public String getPorts() {
+        return ports;
+    }
+
+    public void setPorts(String ports) {
+        this.ports = ports;
+    }
+
+    public boolean isHDR() {
+        return isHDR;
+    }
+
+    public void setHDR(boolean HDR) {
+        isHDR = HDR;
+    }
+
+    @Override
+    public String toString() {
+        return "Monitor{" +
+                "screenSize=" + screenSize +
+                ", resolution=" + resolution +
+                ", panelType='" + panelType + '\'' +
+                ", refreshRate=" + refreshRate +
+                ", isCurved=" + isCurved +
+                ", ports='" + ports + '\'' +
+                ", isHDR=" + isHDR +
+                ", manufacture='" + manufacture + '\'' +
+                ", yearOfManufacture=" + yearOfManufacture +
+                ", price=" + price +
+                ", weight=" + weight +
+                ", isOperational=" + isOperational +
+                '}';
     }
 }

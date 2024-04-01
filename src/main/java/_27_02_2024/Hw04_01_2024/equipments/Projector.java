@@ -7,7 +7,7 @@ import lombok.ToString;
  * Дополнительные поля: lumens, resolution, contrastRatio, lampLife,
  * projectionSize, connectivity, is3DReady.
  */
-@ToString
+
 public class Projector extends OfficeEquipment{
     private String lumens;
     private int resolution;
@@ -39,5 +39,79 @@ public class Projector extends OfficeEquipment{
         this.projectionSize = projectionSize;
         this.connectivity = connectivity;
         this.is3DReady = is3DReady;
+    }
+
+    public String getLumens() {
+        return lumens;
+    }
+
+    public void setLumens(String lumens) {
+        this.lumens = lumens;
+    }
+
+    public int getResolution() {
+        return resolution;
+    }
+
+    public void setResolution(int resolution) {
+        this.resolution = resolution;
+    }
+
+    public int getContrastRatio() {
+        return contrastRatio;
+    }
+
+    public void setContrastRatio(int contrastRatio) {
+        this.contrastRatio = contrastRatio;
+    }
+
+    public double getLampLife() {
+        return lampLife;
+    }
+
+    public void setLampLife(double lampLife) {
+        this.lampLife = lampLife;
+    }
+
+    public int getProjectionSize() {
+        return projectionSize;
+    }
+
+    public void setProjectionSize(int projectionSize) {
+        this.projectionSize = projectionSize;
+    }
+
+    public String getConnectivity() {
+        return connectivity;
+    }
+
+    public void setConnectivity(String connectivity) {
+        this.connectivity = connectivity;
+    }
+
+    public boolean isIs3DReady() {
+        return is3DReady;
+    }
+
+    public void setIs3DReady(boolean is3DReady) {
+        this.is3DReady = is3DReady;
+    }
+
+    @Override
+    public String toString() {
+        return "Projector{" +
+                "lumens='" + lumens + '\'' +
+                ", resolution=" + resolution +
+                ", contrastRatio=" + contrastRatio +
+                ", lampLife=" + lampLife +
+                ", projectionSize=" + projectionSize +
+                ", connectivity='" + connectivity + '\'' +
+                ", is3DReady=" + is3DReady +
+                ", manufacture='" + manufacture + '\'' +
+                ", yearOfManufacture=" + yearOfManufacture +
+                ", price=" + price +
+                ", weight=" + weight +
+                ", isOperational=" + isOperational +
+                '}';
     }
 }
