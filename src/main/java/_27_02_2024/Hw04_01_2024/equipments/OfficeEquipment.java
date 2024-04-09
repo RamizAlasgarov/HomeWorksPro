@@ -63,17 +63,4 @@ public class OfficeEquipment {
         return isOperational;
     }
 
-
-    //    @Override
-//    public String toString() {
-//        return "OfficeEquipment{" +
-//                "id=" + id +
-//                ", modelName='" + modelName + '\'' +
-//                ", manufacture='" + manufacture + '\'' +
-//                ", yearOfManufacture=" + yearOfManufacture +
-//                ", price=" + price +
-//                ", weight=" + weight +
-//                ", isOperational=" + isOperational +
-//                '}';
-//    }
 }

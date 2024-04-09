@@ -8,6 +8,8 @@ public class Manager extends Employee{
         this.subordinatesCount = subordinatesCount;
     }
 
+
+
     public int getSubordinatesCount() {
         return subordinatesCount;
     }
@@ -20,12 +22,20 @@ public class Manager extends Employee{
     public String toString() {
         return "Manager{" +
                 "subordinatesCount=" + subordinatesCount +
+                ", name='" + name + '\'' +
+                ", position='" + position + '\'' +
+                ", salary=" + salary +
                 '}';
     }
 
+    @Override
+    public double calculateBonus() {
+        Employee employee = new Employee();
+        return employee.salary*=0.02;
+    }
 
-//    @Override
-//    public double calculateBonus() {
-//        return super.setSalary() *= 0.02;
-//    }
 }
+
+
+
+

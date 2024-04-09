@@ -3,7 +3,7 @@ package _27_02_2024.Hw04_01_2024.calling;
 import _27_02_2024.Hw04_01_2024.TryMethods.AllMethods;
 import _27_02_2024.Hw04_01_2024.creating.CreateAllInformationInArray;
 
-public class LauchFuntionality {
+public class LaunchFunctionality {
     public void callAllMethods(){
         CreateAllInformationInArray createAllInformation = new CreateAllInformationInArray();
         AllMethods allMethods = new AllMethods();

@@ -12,8 +12,9 @@ import java.util.Date;
  */
 public class CreateAllInformationInArray {
     Faker faker = new Faker();
-    Date date =  new Date(1990, 01, 01);
-    Date date1 =  new Date(2024, 01, 01);
+    private Date date =  new Date(1990, 01, 01);
+    private Date date1 =  new Date(2024, 01, 01);
+
     public OfficeEquipment[] officeEquipment = new OfficeEquipment[]{new OfficeEquipment(faker.number().randomDigit(),
             faker.name().name(),
             faker.name().name(),

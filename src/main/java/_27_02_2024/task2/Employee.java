@@ -1,15 +1,19 @@
 package _27_02_2024.task2;
 
+import lombok.ToString;
+
+@ToString
 public class Employee {
-    private String name;
-    private String position;
-    private double salary;
+    protected String name;
+    protected String position;
+    protected double salary;
 
     public Employee(String name, String position, double salary) {
         this.name = name;
         this.position = position;
         this.salary = salary;
     }
+    public Employee(){}
 
     public String getName() {
         return name;
@@ -35,14 +39,6 @@ public class Employee {
         this.salary = salary;
     }
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", position='" + position + '\'' +
-                ", salary=" + salary +
-                '}';
-    }
 
     public double calculateBonus(){
         return salary *= 0.05;

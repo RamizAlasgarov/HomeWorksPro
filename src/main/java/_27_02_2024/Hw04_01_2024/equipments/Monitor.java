@@ -40,6 +40,8 @@ public class Monitor extends OfficeEquipment{
         this.isHDR = isHDR;
     }
 
+
+
     public int getScreenSize() {
         return screenSize;
     }
