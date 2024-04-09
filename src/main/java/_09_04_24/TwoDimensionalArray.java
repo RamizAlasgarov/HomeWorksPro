@@ -11,7 +11,7 @@ public class TwoDimensionalArray {
                                     {24, 29, 44, 55, 66}};
         findNumberTwo(array,25);
 
-//        System.out.println(array[3][]);
+
 //        for (int i = 0; i < array.length; i++) {
 //            System.out.println(array[i]);
 //        }
@@ -38,7 +38,8 @@ public class TwoDimensionalArray {
     public static void findNumberTwo(int[][] array, int number) {
         int counter = 1;
         int seconCounter = 1;
-        int end = array[4][0];
+        int startCount = array[4][0];
+        int endCount = array[0][4];
 
 //        for (int i = end; i > array.length/2; i--) {
 //                if(end < number){
@@ -52,19 +53,21 @@ public class TwoDimensionalArray {
 //                System.out.println(end);
 //                }
 //        }
-        for (int i = end; i > 0; i--) {
-            if(number > end){
-                end = array[4][1+counter];
+        for (int i = startCount; i > endCount; i++) {
+            if(number > startCount) {
+                startCount = array[4][counter];
 
-            }
-            if(number < end){
-                end = array[4-seconCounter][1+counter];
-            }
-            if(number == end){
-                System.out.println(number);
+
+                if (number < startCount) {
+                    startCount = array[4 - seconCounter][counter];
+                }
+                if (number == startCount) {
+                    System.out.println(number);
+                }
             }
 
         }
+
     }
 }
 
