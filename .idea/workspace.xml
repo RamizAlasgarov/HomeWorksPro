@@ -5,21 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db0000be-4ec7-4c6d-b107-22acd68e76f5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/calling/LauchFuntionality.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw/enums/Color.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw/enums/Country.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw/enums/Currency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw/enums/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw/file.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw/information/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw/information/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw/information/Auto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw/information/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_9_2024_5_52_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_9_2024_5_52_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/TryMethods/AllMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/TryMethods/AllMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/creating/CreateAllInformationInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/creating/CreateAllInformationInArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Monitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Monitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/NoteBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/NoteBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/OfficeEquipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/OfficeEquipment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Phone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Printer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Projector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Projector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Scanner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Switch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Switch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Tablet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Tablet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,11 +27,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -129,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application._27_02_2024.Hw04_01_2024.Demo" />
-        <item itemvalue="Application.Demo" />
         <item itemvalue="Application.TaskTwo" />
         <item itemvalue="Application.TaskOne" />
         <item itemvalue="Application.T" />
+        <item itemvalue="Application.Demo" />
+        <item itemvalue="Application._27_02_2024.Hw04_01_2024.Demo" />
       </list>
     </recent_temporary>
   </component>
@@ -173,5 +176,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="." />
     <option name="LAST_COMMIT_MESSAGE" value="." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hw/Demo.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
