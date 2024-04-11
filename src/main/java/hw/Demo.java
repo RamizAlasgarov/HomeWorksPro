@@ -35,12 +35,19 @@ public class Demo {
         Account[] accounts = new Account[]{account,account2};
 
 
-        Person person = new Person("petr","Petrov",address,1300.2,auto,accounts);
-        Person person2 = new Person("Ivan","Petrov",address,1300.2,auto2,accounts);
-        Person person3 = new Person("Mixa","Ivanov",address,1300.2,auto3,accounts);
+        Person person = new Person("petr","Petrov",address,2300.2,auto,accounts);
+        Person person2 = new Person("Ivan","Petrov",address1,2300.2,auto2,accounts);
+        Person person3 = new Person("Mixa","Ivanov",address2,1300.2,auto3,accounts);
 
 
         Person[] persons = new Person[]{person,person2,person3};
         System.out.println(Arrays.toString(AllMethods.isRedIsSport(persons)));
+        System.out.println();
+        System.out.println(AllMethods.findAverageSalaryInCountry(persons,Country.GERMANY));
+        System.out.println();
+//        System.out.println(Arrays.toString(AllMethods.findAccountInfo(persons, 1500)));
+        System.out.println();
+        System.out.println(Arrays.toString(AllMethods.findYearOfReleased(persons, 2005)));
+        System.out.println();
     }
 }
