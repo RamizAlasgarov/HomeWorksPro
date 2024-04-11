@@ -10,6 +10,7 @@ import hw.information.Address;
 import hw.information.Auto;
 import hw.information.Person;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Demo {
@@ -17,12 +18,6 @@ public class Demo {
     public static void main(String[] args) {
         Faker faker = new Faker();
         Random random = new Random();
-//        Color color = Color.RED;
-//        Color color1 = Color.SILVER;
-//        Color color2 = Color.WHITE;
-//        Currency currency = Currency.EURO;
-//        Currency currency1 = Currency.USD;
-//        Currency currency2 = Currency.RUBL;
 
 
         Address address = new Address(Country.GERMANY,"dorfer Strasse",15);
@@ -41,19 +36,11 @@ public class Demo {
 
 
         Person person = new Person("petr","Petrov",address,1300.2,auto,accounts);
-        Person person2 = new Person("petr","Petrov",address,1300.2,auto,accounts);
-        Person person3 = new Person("petr","Petrov",address,1300.2,auto,accounts);
+        Person person2 = new Person("Ivan","Petrov",address,1300.2,auto2,accounts);
+        Person person3 = new Person("Mixa","Ivanov",address,1300.2,auto3,accounts);
 
 
-
-
-    }
-
-
-    /**
-     * Вывести имена и фамилии всех лиц, чьи автомобили не красные и не спортивные.
-     */
-    public void findNotReadAndNotSport(){
-
+        Person[] persons = new Person[]{person,person2,person3};
+        System.out.println(Arrays.toString(AllMethods.isRedIsSport(persons)));
     }
 }
