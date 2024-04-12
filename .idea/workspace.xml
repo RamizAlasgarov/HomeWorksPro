@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db0000be-4ec7-4c6d-b107-22acd68e76f5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw/enums/Color.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw/enums/Country.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw/enums/Currency.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw/enums/Model.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw/file.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw/information/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw/information/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw/information/Auto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw/information/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_9_2024_5_52_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_9_2024_5_52_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw/AllMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/AllMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw/information/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/information/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +56,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application._27_02_2024.Hw04_01_2024.Demo">
+  <component name="RunManager" selected="Application.hw.Demo">
     <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_27_02_2024.task1.Demo" />
       <module name="HomeWorksPro" />
@@ -117,12 +109,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_27_02_2024.Hw04_01_2024.Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_27_02_2024.Hw04_01_2024.Demo" />
+    <configuration name="hw.Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hw.Demo" />
       <module name="HomeWorksPro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_27_02_2024.Hw04_01_2024.*" />
+          <option name="PATTERN" value="hw.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,11 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.hw.Demo" />
         <item itemvalue="Application.TaskTwo" />
         <item itemvalue="Application.TaskOne" />
         <item itemvalue="Application.T" />
         <item itemvalue="Application.Demo" />
-        <item itemvalue="Application._27_02_2024.Hw04_01_2024.Demo" />
       </list>
     </recent_temporary>
   </component>
@@ -170,22 +162,32 @@
       <option name="project" value="LOCAL" />
       <updated>1711974126031</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=".">
+      <created>1712745320379</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712745320379</updated>
+    </task>
+    <task id="LOCAL-00005" summary=".">
+      <created>1712836521486</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712836521486</updated>
+    </task>
+    <task id="LOCAL-00006" summary=".">
+      <created>1712860439845</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712860439845</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="." />
     <option name="LAST_COMMIT_MESSAGE" value="." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/hw/Demo.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

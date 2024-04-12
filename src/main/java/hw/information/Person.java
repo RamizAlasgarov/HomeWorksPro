@@ -1,5 +1,7 @@
 package hw.information;
 
+import java.util.Arrays;
+
 /**
  * 5.Создать класс Person.
  * Поля:
@@ -8,17 +10,17 @@ package hw.information;
  * - адрес(это отдельный класс)
  * - зарплата
  * - авто(это отдельный класс)
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
  * - массив счетов(отдельный клас) -
  */
 public class Person {
     private String name;
-    private  String surname;
+    private String surname;
     private Address address;
     private double salary;
-    private Auto auto ;
+    private Auto auto;
     private Account[] accounts;
 
     public Person(String name, String surmane, Address address, double salary, Auto auto, Account[] accounts) {
@@ -76,5 +78,10 @@ public class Person {
 
     public void setAccounts(Account[] accounts) {
         this.accounts = accounts;
+    }
+
+    @Override
+    public String toString() {
+        return name + " " +  surname;
     }
 }
