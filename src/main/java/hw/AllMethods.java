@@ -14,7 +14,7 @@ public class AllMethods {
      * Вывести имена и фамилии всех лиц, чьи автомобили не красные и не спортивные.
      */
     public static List<String> isRedIsSport(List<Person> persons) {
-        List<String> result = new ArrayList<>(persons.size());
+        List<String> result = new ArrayList<>();
         for (int i = 0; i < persons.size(); i++) {
             if (!persons.get(i).getAuto().getColors().equals("red") && !persons.get(i).getAuto().isSport()) {
                 result.add(persons.get(i).getSurname() + " " + persons.get(i).getName());
@@ -30,7 +30,7 @@ public class AllMethods {
         int counter = 0;
         double result = 0;
         for (int i = 0; i < persons.size(); i++) {
-            if (persons.get(i).getAddress().getCountry() == country){
+            if (persons.get(i).getAddress().getCountry() == country) {
                 result += persons.get(i).getSalary();
                 counter++;
             }
@@ -41,32 +41,46 @@ public class AllMethods {
     /**
      * Вывести информацию о всех лицах, у которых счет в определенной валюте превышает заданный баланс.
      */
-//    public static String[] findAccountInfo(Person[] person,double balance){
-//        String[] people = new String[person.length];
-//        for (int i = 0; i < person.length; i++) {
-//            if(person[i].getAccounts()[i].getBalance() > balance){
-//                people[i] = person[i].getName() + " " + person[i].getSurname();
-//            }
-//        }
-//        return people;
-//    }
+    public static List<String> findAccountInfo(List<Person> person, double balance) {
+        List<String> list = new ArrayList<>();
+        for (int i = 0; i < person.size(); i++) {
+            if (person.get(i).getAccounts().get(i).getBalance() > balance) {
+                list.add(person.get(i).getName());
+            }
+
+        }
+        return list;
+    }
 
     /**
      * Перечислить всех, у кого автомобиль был выпущен до определенного года.
      */
-    public static String[] findYearOfReleased(Person[] person, int year) {
-        String[] people = new String[person.length];
-        for (int i = 0; i < person.length; i++) {
-            if (person[i].getAuto().getYearOfProduction() < year) {
-                people[i] = person[i].getName() + " " + person[i].getSurname();
+    public static List<String> findYearOfReleased(List<Person> person, int year) {
+        List<String> list = new ArrayList<>();
+        for (int i = 0; i < person.size(); i++) {
+            if (person.get(i).getAuto().getYearOfProduction() < year) {
+                list.add(person.get(i).getName() + " " + person.get(i).getSurname());
             }
         }
-        return people;
+        return list;
     }
 
-//    /**
-//     * Найти лиц, живущих на одной улице, но в разных домах.
-//     */
+
+    /**
+     * Найти лиц, живущих на одной улице, но в разных домах.
+     */
+    public static List<String> findSameStreetDifferentHouse(List<Person> personList, String street, List<Address> addressList) {
+        List<String> resultList = new ArrayList<>();
+        for (int i = 0; i <= personList.size(); i++) {
+            for (int j = addressList.get(i).getNumberOFHouse(); j >= 0; j--) {
+                if (personList.get(i).getAddress().getStreet().equals(street) && personList.get(i).getAddress().getNumberOFHouse() == personList.get(i + 1).getAddress().getNumberOFHouse()) {
+                    resultList.add(personList.get(i).getName() + personList.get(i).getSurname());
+                }
+            }
+
+        }
+        return resultList;
+    }
 //    public static String[] findSameStreetButDifferentHouses(Person[] person, Address[] addresses){
 //        int info = 0;
 //        for (int i = addresses.length; i > 0; i--) {
@@ -173,11 +187,51 @@ public class AllMethods {
     /**
      * Вывести список всех лиц без автомобилей (предполагая, что авто может быть null).
      */
-//    public static ArrayList<String> withOutAuto(int[] people){
-//        for (int i = 0; i < people.length; i++) {
-//
-//        }
-//    }
-}
+    public static List<String> withOutAuto(List<Person> personList) {
+        List<String> list = new ArrayList<>();
+        for (int i = 0; i < personList.size(); i++) {
+            if (personList.get(i).getAuto() == null) {
+                list.add(personList.get(i).getName());
+            }
+        }
+        return list;
+    }
+    /**
+     * Определить количество лиц, имеющих спортивный автомобиль с мощностью более 300 л.с.
+     */
+    public static List<String> findWhoHaveSportCar(List<Person> personList){
+        List<String> list = new ArrayList<>();
+        for (int i = 0; i < personList.size(); i++) {
+            if(personList.get(i).getAuto().isSport() && personList.get(i).getAuto().getHorsePower() > 300){
+                list.add(personList.get(i).getName() +" " + personList.get(i).getSurname());
+            }
+        }
+        return list;
+    }
 
+    /**
+     * Найти и вывести имена и фамилии лиц, имеющих более одного счета (предполагая наличие списка счетов).
+     */
+    public static List<String> findTwoAccount(List<Person> personList){
+        List<String> list = new ArrayList<>();
+        for (int i = 0; i < personList.size(); i++) {
+            if(personList.get(i).getAccounts().size() > 1){
+                list.add(personList.get(i).getName() + " " + personList.get(i).getSurname());
+            }
+        }
+        return list;
+    }
+    /**
+     * Вывести список лиц, чьи автомобили являются наиболее мощными в своем классе (спортивные/неспортивные).
+     */
+    public static List<String> findStrongestAuto(List<Person> personList){
+        List<String> list = new ArrayList<>();
+        for (int i = 0; i < personList.size(); i++) {
+            if(personList.get(i).getAuto().isSport() && personList.get(i).getAuto().getModel().name().equals(personList.get(i).getAuto().getModel().name())) {
+                list.add(personList.get(i).getName());
+            }
+        }
+        return list;
+    }
+}
 
