@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db0000be-4ec7-4c6d-b107-22acd68e76f5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/calling/LauchFuntionality.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/TryMethods/AllMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/TryMethods/AllMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/creating/CreateAllInformationInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/creating/CreateAllInformationInArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Monitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Monitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/NoteBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/NoteBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/OfficeEquipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/OfficeEquipment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Phone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Printer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Projector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Projector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Scanner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Switch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Switch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Tablet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_27_02_2024/Hw04_01_2024/equipments/Tablet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_09_04_24/TwoDimensionalArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_09_04_24/TwoDimensionalArray.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,11 +17,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -61,7 +54,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application._27_02_2024.Hw04_01_2024.Demo">
+  <component name="RunManager" selected="Application.hw.Demo">
     <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_27_02_2024.task1.Demo" />
       <module name="HomeWorksPro" />
@@ -114,12 +107,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_27_02_2024.Hw04_01_2024.Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_27_02_2024.Hw04_01_2024.Demo" />
+    <configuration name="hw.Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hw.Demo" />
       <module name="HomeWorksPro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_27_02_2024.Hw04_01_2024.*" />
+          <option name="PATTERN" value="hw.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,11 +122,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application._27_02_2024.Hw04_01_2024.Demo" />
-        <item itemvalue="Application.Demo" />
+        <item itemvalue="Application.hw.Demo" />
         <item itemvalue="Application.TaskTwo" />
         <item itemvalue="Application.TaskOne" />
         <item itemvalue="Application.T" />
+        <item itemvalue="Application.Demo" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +160,28 @@
       <option name="project" value="LOCAL" />
       <updated>1711974126031</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=".">
+      <created>1712745320379</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712745320379</updated>
+    </task>
+    <task id="LOCAL-00005" summary=".">
+      <created>1712836521486</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712836521486</updated>
+    </task>
+    <task id="LOCAL-00006" summary=".">
+      <created>1712860439845</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712860439845</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
