@@ -1,6 +1,7 @@
 package hw.information;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * 5.Создать класс Person.
@@ -21,11 +22,11 @@ public class Person {
     private Address address;
     private double salary;
     private Auto auto;
-    private Account[] accounts;
+    private List<Account> accounts;
 
-    public Person(String name, String surmane, Address address, double salary, Auto auto, Account[] accounts) {
+    public Person(String name, String surname, Address address, double salary, Auto auto, List<Account> accounts) {
         this.name = name;
-        this.surname = surmane;
+        this.surname = surname;
         this.address = address;
         this.salary = salary;
         this.auto = auto;
@@ -72,11 +73,11 @@ public class Person {
         this.auto = auto;
     }
 
-    public Account[] getAccounts() {
+    public List<Account> getAccounts() {
         return accounts;
     }
 
-    public void setAccounts(Account[] accounts) {
+    public void setAccounts(List<Account> accounts) {
         this.accounts = accounts;
     }
 
