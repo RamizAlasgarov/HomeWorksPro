@@ -81,108 +81,6 @@ public class AllMethods {
         }
         return resultList;
     }
-//    public static String[] findSameStreetButDifferentHouses(Person[] person, Address[] addresses){
-//        int info = 0;
-//        for (int i = addresses.length; i > 0; i--) {
-//            info = addresses[i].getNumberOFHouse();
-//        }
-//        String[] people = new String[person.length];
-//        for (int i = 0; i < person.length; i++) {
-//            if(person[i].getAddress().getStreet().equals(addresses[i].getStreet()) &&
-//                    (person[i].getAddress().getNumberOFHouse() != addresses[i].getNumberOFHouse())){
-//
-//                people[i] = person[i].getName() + person[i].getSurname();
-//            }
-//        }
-//        return people;
-//    }
-
-//
-// (person[i].getAddress().getNumberOFHouse() != addresses[i].getNumberOFHouse())
-//public static String[] findSameStreetButDifferentHouses2(Person[] person, Address[] addresses) {
-//    String[] people = new String[person.length];
-//    for (int i = 0; i < person.length; i++) {
-//        if (person[i].getAddress().getStreet().equals(addresses[i].getStreet())) {
-//            for (int j = addresses.length-1; j > 0; j--) {
-//                if (person[i].getAddress().getNumberOFHouse() != addresses[j].getNumberOFHouse() && (i!=j)) {
-//                    people[i] = person[i].getName() + " " + person[i].getSurname();
-//                }
-//            }
-//
-//        }
-//    }
-//    return people;
-//}
-
-//    /**
-//     * Найти лиц, живущих на одной улице, но в разных домах.
-//     */
-//    public static StreetToPeople[] findSameStreetButDifferentHouses(Person[] person) {
-//        StreetToPeople[] streetsToPeople = new StreetToPeople[person.length];
-//        int index = 0;
-//        for (int i = 0; i < person.length; i++) {
-//            for (int j = i + 1; j < person.length; j++) {
-//                if (person[i].getAddress().getStreet().equals(person[j].getAddress().getStreet()) &&
-//                        person[i].getAddress().getNumberOFHouse() != person[j].getAddress().getNumberOFHouse()) {
-//                    StreetToPeople stp = new StreetToPeople(person[i].getAddress().getStreet(), new Person[]{person[i], person[j]});
-//                    streetsToPeople[index] = stp;
-//                    index++;
-//                }
-//            }
-//        }
-//        return reshuffle(Arrays.copyOfRange(streetsToPeople,0,index));
-//
-//    }
-//
-//    private static StreetToPeople[] reshuffle(StreetToPeople[] streetToPeople) {
-//        StreetToPeople[] street = new StreetToPeople[streetToPeople.length];
-//        int streetIndex = 0;
-//        for (int i = 0; i < streetToPeople.length; i++) {
-//            Person[] peopleOnThisStreet = new Person[10];
-//            int index = 0;
-//            String nameOfStreet = streetToPeople[i].nameOfStreet;
-//            for (int j = i+1; j <streetToPeople.length; j++) {
-//                if(nameOfStreet.equals(streetToPeople[j].nameOfStreet)){
-//                    for (Person person : streetToPeople[j].people) {
-//                        peopleOnThisStreet[index] = person;
-//                        index++;
-//                    }
-//                }
-//            }
-//            street[streetIndex] = new StreetToPeople(nameOfStreet, Arrays.copyOfRange(peopleOnThisStreet,0,index));
-//            streetIndex++;
-//        }
-//        return Arrays.copyOfRange(street,0,streetIndex);
-//    }
-//
-//
-//
-//
-//    public static class StreetToPeople {
-//        private final String nameOfStreet;
-//        private final Person[] people;
-//
-//        public StreetToPeople(String nameOfStreet, Person[] people) {
-//            this.nameOfStreet = nameOfStreet;
-//            this.people = people;
-//        }
-//
-//        public String getNameOfStreet() {
-//            return nameOfStreet;
-//        }
-//
-//        public Person[] getPeople() {
-//            return people;
-//        }
-//
-//        @Override
-//        public String toString() {
-//            return "StreetToPeople{" +
-//                    "nameOfStreet='" + nameOfStreet + '\'' +
-//                    ", people=" + Arrays.toString(people) +
-//                    '}';
-//        }
-//    }
 
     /**
      * Вывести список всех лиц без автомобилей (предполагая, что авто может быть null).
@@ -224,14 +122,110 @@ public class AllMethods {
     /**
      * Вывести список лиц, чьи автомобили являются наиболее мощными в своем классе (спортивные/неспортивные).
      */
-    public static List<String> findStrongestAuto(List<Person> personList){
-        List<String> list = new ArrayList<>();
+    public static List<String> findStrongestAuto(List<Person> personList,int horsePower){
+
+        List<Person> notSportCar = new ArrayList<>();
+        List<Person> sportCars = new ArrayList<>();
+        List<String> result = new ArrayList<>();
+
         for (int i = 0; i < personList.size(); i++) {
-            if(personList.get(i).getAuto().isSport() && personList.get(i).getAuto().getModel().name().equals(personList.get(i).getAuto().getModel().name())) {
-                list.add(personList.get(i).getName());
+            if(personList.get(i).getAuto().isSport()){
+                sportCars.add(personList.get(i));
             }
         }
-        return list;
+        for (int i = 0; i < personList.size(); i++) {
+            if(!personList.get(i).getAuto().isSport()){
+                notSportCar.add(personList.get(i));
+            }
+        }
+        for (int i = 0; i < notSportCar.size(); i++) {
+            if(notSportCar.get(i).getAuto().getHorsePower() > horsePower){
+                result.add(notSportCar.get(i).getName());
+            }
+        }
+        for (int i = 0; i < sportCars.size(); i++) {                    // kak sdelat ot zapolnennoy kollekcii
+            if(sportCars.get(i).getAuto().getHorsePower() > horsePower){
+                result.add(sportCars.get(i).getName());
+            }
+        }
+
+        return result;
+//        private static void printMaxCapacityAuto(Person[] array) {
+//            Person maxSportive = null;
+//            Person maxNonSportive = null;
+//
+//            for (Person person : array) {
+//                if (person.getAuto().isSportive()) {
+//                    if (maxSportive == null) {
+//                        maxSportive = person;
+//                    } else if (person.getAuto().getCapacity() > maxSportive.getAuto().getCapacity()) {
+//                        maxSportive = person;
+//                    }
+//                } else {
+//                    if (maxNonSportive == null) {
+//                        maxNonSportive = person;
+//                    } else if (person.getAuto().getCapacity() > maxNonSportive.getAuto().getCapacity()) {
+//                        maxNonSportive = person;
+//                    }
+//                }
+//            }
+//
+//            System.out.println("Самый мощный спортивный: " + maxSportive);
+//            System.out.println("Самый мощный не спортивный: " + maxNonSportive);
+//        }
     }
+
+    /**
+     * Вывести всех лиц, живущих в домах, номера которых заканчиваются на "5".
+     */
+    public static List<Person> findHousesEndWithFive(List<Person> personList){
+        List<Person> intermediateList = new ArrayList<>();
+        for (int i = 5; i < 10_000; i+=10) {
+
+        }
+        for (int i = 0; i < personList.size(); i++) {
+            if(personList.get(i).getAddress().getNumberOFHouse() % 5 == 0 ){
+                    intermediateList.add(personList.get(i));
+            }
+        }
+        for (int i = 0; i < intermediateList.size(); i++) {
+            if(intermediateList.get(i).getAddress().getNumberOFHouse() % 10 == 0){
+                intermediateList.remove(i);
+            }
+        }
+        return intermediateList;
+    }
+    /**
+     * public static List<Integer> getUniqueDigit(List<Integer> integerList) {
+     *     Collections.sort(integerList);
+     *     for (int i = 0; i < integerList.size()-1; ) {
+     *         if (integerList.get(i) == integerList.get(i + 1)) {
+     *             integerList.remove(i + 1);
+     *         }else {
+     *             i++;
+     *         }
+     *     }
+     *     return integerList;
+     * }
+     */
+    /**
+     * Найти лиц с автомобилями определенной марки и цвета.
+     */
+    public static List<String> findSameCarAndColor(List<Person> personList){
+        List<String> nameList = new ArrayList<>();
+        for (int i = 0; i < personList.size()-1; i++) {
+            if(personList.get(i).getAuto().getModel().name().equals(personList.get(i+1).getAuto().getModel().name())){
+                nameList.add(personList.get(i).getName());
+            }
+        }
+        return nameList;
+    }
+
+
+
+
+
+
+
 }
 

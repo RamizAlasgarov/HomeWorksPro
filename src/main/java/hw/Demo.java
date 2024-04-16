@@ -22,7 +22,7 @@ public class Demo {
         Random random = new Random();
 
 
-        Address address = new Address(Country.GERMANY, "blinkin street", 11);
+        Address address = new Address(Country.GERMANY, "blinkin street", 15);
         Address address1 = new Address(Country.GERMANY, "dorfer street", 10);
         Address address2 = new Address(Country.USA, "blinkin street", 12);
         List<Address> addresses = List.of(address, address1, address2);
@@ -44,36 +44,35 @@ public class Demo {
         accounts2.add(account);
 
 
-        Person person = new Person("petr", "Petrov", address, 2300.2, auto, accounts2);
+        Person person1 = new Person("petr", "Petrov", address, 2300.2, auto, accounts2);
         Person person2 = new Person("Ivan", "Aleksandrov", address1, 2300.2, auto2, accounts);
         Person person3 = new Person("Mixa", "Ivanov", address2, 1300.2, auto3, accounts);
         Person person4 = new Person("Ramiz", "Alasgarov", address2, 1300.2, auto4, accounts);
-
-//        Person person4 = new Person("jane","Ivanova",address2,1300.2,null,accounts);
+        Person person5 = new Person("jane","Ivanova",address2,1300.2,null,accounts);
         List<Person> persons = new ArrayList<>();
-        persons.add(person);
+        persons.add(person1);
         persons.add(person2);
         persons.add(person3);
-//        persons.add(person4);
+        persons.add(person4);
 
 
 //        System.out.println(AllMethods.isRedIsSport(persons));
 //        System.out.println();
 //        System.out.println(AllMethods.findAverageSalaryInCountry(persons,Country.GERMANY));
 //        System.out.println();
-//                                                                             System.out.println(AllMethods.findAccountInfo(persons, 1500));
+//        System.out.println(AllMethods.findAccountInfo(persons, 1500));
 //        System.out.println();
 //        System.out.println(AllMethods.findYearOfReleased(persons, 2005));
-        System.out.println();
-//                                                                             System.out.println(AllMethods.findSameStreetDifferentHouse(persons,"blinkin street",addresses));
-        System.out.println();
+          System.out.println();
+//        System.out.println(AllMethods.findSameStreetDifferentHouse(persons,"blinkin street",addresses));
+          System.out.println();
 //        System.out.println(AllMethods.withOutAuto(persons));
-//                                                                                System.out.println(AllMethods.findWhoHaveSportCar(persons)); // problema s null
-        System.out.println();
+//        System.out.println(AllMethods.findWhoHaveSportCar(persons)); // problema s null
+          System.out.println();
 //        System.out.println(AllMethods.findTwoAccount(persons));
-        System.out.println();
-        System.out.println(AllMethods.findStrongestAuto(persons));
-
-
+          System.out.println();
+//        System.out.println(AllMethods.findStrongestAuto(persons,300));
+//        System.out.println(AllMethods.findHousesEndWithFive(persons));
+        System.out.println(AllMethods.findSameCarAndColor(persons));
     }
 }
