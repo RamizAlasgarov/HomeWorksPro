@@ -2,11 +2,14 @@ package hw;
 
 import hw.enums.Color;
 import hw.enums.Country;
+import hw.enums.Model;
 import hw.information.Address;
+import hw.information.Auto;
 import hw.information.Person;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class AllMethods {
@@ -211,21 +214,150 @@ public class AllMethods {
     /**
      * Найти лиц с автомобилями определенной марки и цвета.
      */
-    public static List<String> findSameCarAndColor(List<Person> personList){
-        List<String> nameList = new ArrayList<>();
+    public static List<Person> findSameCarAndColor(List<Person> personList, Model model,Color color){
+        List<Person> nameList = new ArrayList<>();
         for (int i = 0; i < personList.size()-1; i++) {
-            if(personList.get(i).getAuto().getModel().name().equals(personList.get(i+1).getAuto().getModel().name())){
-                nameList.add(personList.get(i).getName());
+            if(personList.get(i).getAuto().getModel().equals(model) && personList.get(i).getAuto().getColors().equals(color)){
+                nameList.add(personList.get(i));
             }
         }
         return nameList;
     }
 
+    /**
+     * Вывести имена лиц, у которых зарплата выше среднего по массиву.
+     */
+        public static double findAverageSalary(List<Person> personList){
+            double resultSalary = 0;
+            for (int i = 0; i < personList.size(); i++) {
+                resultSalary += personList.get(i).getSalary();
+            }
+            return resultSalary / personList.size();
+        }
 
+    /**
+     * Определить лиц с наибольшим балансом на счету.
+     */
+    public static double findMaxBalance(List<Person> personList){
+        double max = Integer.MIN_VALUE;
+        List<String> resultList = new ArrayList<>();
+        for (int i = 0; i < personList.size(); i++) {
+            if(personList.get(i).getSalary() > max){
+                max = personList.get(i).getSalary();
+            }
+        }
+        return max;
+    }
+    public static List<String> findNameOfMaxBalance1(List<Person> personList){
+        List<String> resultList = new ArrayList<>();
+        for (int i = 0; i < personList.size(); i++) {
+            if(personList.get(i).getSalary() == AllMethods.findMaxBalance(personList)){
+                resultList = Collections.singletonList(personList.get(i).getName());
+            }
+        }
+        return resultList;
+    }
 
+    /**
+     * Вывести список лиц, чьи автомобили были куплены новыми (год выпуска авто равен текущему году).
+     */
+    public static List<Person> findNewCar(List<Person> personList){
+        List<Person> list = new ArrayList<>();
+        for (int i = 0; i < personList.size(); i++) {
+            if(personList.get(i).getAuto().getYearOfProduction() == 2024){
+                list.add(personList.get(i));
+            }
+        }
+        return list;
+    }
 
+    /**
+     * Найти лиц, у которых есть автомобиль определенного цвета, но не спортивный.
+     */
+        public static List<String> findNotSportCarsColor(List<Person> personList,Color color){
+            List<String> resultList = new ArrayList<>();
+            for (int i = 0; i < personList.size(); i++) {
+                if(!personList.get(i).getAuto().isSport() && personList.get(i).getAuto().getColors().equals(color)){
+                    resultList.add(personList.get(i).getName()+ " " + personList.get(i).getSurname());
+                }
+            }
+            return resultList;
+        }
 
+    /**
+     * Вывести список лиц, проживающих в квартирах (номер квартиры не равен 0).
+     */
+    public static List<Person> findWhoLiveInFlatZero(List<Person> personList){
+        List<Person> list = new ArrayList<>();
+        for (int i = 0; i < personList.size(); i++) {
+            if(personList.get(i).getAddress().getNumberOfFlat() == 0){
+                list.add(personList.get(i));
+            }
+        }
+        return list;
+    }
+    /**
+     * Найти и вывести лиц, чьи автомобили имеют стоимость выше заданной.
+     */
+    public static List<Person> findPriceWhichMoreThanWritten(List<Person> personList,int price){
+        List<Person> list = new ArrayList<>();
+        for (int i = 0; i < personList.size(); i++) {
+            if(personList.get(i).getAuto().getPrice() > price){
+                list.add(personList.get(i));
+            }
+        }
+        return list;
+    }
+    /**
+     * Вывести имена и фамилии всех лиц, чьи автомобили имеют четное количество дверей.
+     */
+    public static List<Person> findEvenNumberOfDoor(List<Person> personList){
+        List<Person> list = new ArrayList<>();
+        for (int i = 0; i < personList.size(); i++) {
+            if(personList.get(i).getAuto().getDoorCount() % 2 == 0 ){
+                list.add(personList.get(i));
+            }
+        }
+        return list;
+    }
+    /**
+     * Определить и вывести лицо, имеющего счет с наименьшим балансом.
+     */
+//    public static List<String> findPersonWithLessBalance(List<Person> personList){
+//        int res = 0;
+//        List<Person> list = new ArrayList<>();
+//        for (int i = 0; i < personList.size(); i++) {
+//
+//
+//        }
+//    }
 
+    /**
+     * Вывести список лиц, имеющих автомобили, которые стоят дороже их зарплаты.
+     */
+    public static List<Person> findCarPriceMoreThanSalary(List<Person> personList){
+        List<Person> list = new ArrayList<>();
+        for (Person person : personList) {
+            if (person.getAuto().getPrice() > person.getSalary()) {
+                list.add(person);
+            }
+        }
+        return list;
+    }
 
+    /**
+     * Найти лиц, проживающих не в своей стране (предполагая, что есть поле гражданства в классе Person).
+     */
+    public static List<Person> findForeigner(List<Person> personList,Country country){
+        List<Person> people = new ArrayList<>();
+
+        for (Person person : personList) {
+            if (!person.getAddress().getCountry().equals(country)) {
+                  people.add(person);
+            }
+        }
+        return people;
+
+    }
 }
 

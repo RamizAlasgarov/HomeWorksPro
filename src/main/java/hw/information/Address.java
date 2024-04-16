@@ -14,13 +14,13 @@ public class Address {
         private Country country;
         private String street;
         private int numberOFHouse;
-//        private int numberOfFlat;
+        private int numberOfFlat;
 
-        public Address(Country country, String street, int numberOFHouse) {
+        public Address(Country country, String street, int numberOFHouse,int numberOfFlat) {
                 this.country = country;
                 this.street = street;
                 this.numberOFHouse = numberOFHouse;
-//                this.numberOfFlat = numberOfFlat;
+                this.numberOfFlat = numberOfFlat;
         }
 
         public Country getCountry() {
@@ -47,11 +47,11 @@ public class Address {
                 this.numberOFHouse = numberOFHouse;
         }
 
-//        public int getNumberOfFlat() {
-//                return numberOfFlat;
-//        }
-//
-//        public void setNumberOfFlat(int numberOfFlat) {
-//                this.numberOfFlat = numberOfFlat;
-//        }
+        public int getNumberOfFlat() {
+                return numberOfFlat;
+        }
+
+        public void setNumberOfFlat(int numberOfFlat) {
+                this.numberOfFlat = numberOfFlat;
+        }
 }
