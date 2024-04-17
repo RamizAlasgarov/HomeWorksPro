@@ -357,7 +357,55 @@ public class AllMethods {
             }
         }
         return people;
+    }
+    /**
+     * Определить количество лиц, у которых есть автомобили с количеством дверей больше 4.
+     */
+    public static List<Person> findAutosWithMoreFourDoors(List<Person> personList){
+        List<Person> resultList = new ArrayList<>();
+        for (int i = 0; i < personList.size(); i++) {
+            if(personList.get(i).getAuto().getDoorCount() > 4){
+                resultList.add(personList.get(i));
+            }
+        }
+        return resultList;
+    }
+    /**
+     * Вывести список лиц, имеющих автомобиль той же марки, что и автомобиль первого лица в массиве.
+     */
+    public static List<Person> findSameAutoWithPersonOne(List<Person> personList){
+        List<Person> resultList = new ArrayList<>();
+        for (int i = 0; i < personList.size(); i++) {
+            if(personList.get(i).getAuto().getModel().equals(personList.get(0).getAuto().getModel())){
+                resultList.add(personList.get(i));
+            }
+        }
+        return resultList;
+    }
+    /**
+     * Найти лиц, чей счет в определенной валюте является единственным с такой валютой в массиве.
+     */
+    public static List<Person> findSoleAccount(List<Person> personList){
+        List<Person> resultList = new ArrayList<>();
+        for (int i = 0; i < personList.size()-1; i++) {
+            if(personList.get(i).getAccounts().get(i).getCurrency() != personList.get(i+1).getAccounts().get(i+1).getCurrency()){
+                resultList.add(personList.get(i));
+            }
+        }
+        return resultList;
+    }
 
+    /**
+     * Вывести список лиц, у которых нет автомобилей и живут в квартирах.
+     */
+    public static List<Person> findPersonWithOutAutoButLiveInApartments(List<Person> personList){
+        List<Person> resultLIst = new ArrayList<>();
+        for (int i = 0; i < personList.size(); i++) {
+            if(personList.get(i).getAddress().getNumberOFHouse() == -1 && personList.get(i).getAuto() == null){
+                resultLIst.add(personList.get(i));
+            }
+        }
+        return resultLIst;
     }
 }
 
