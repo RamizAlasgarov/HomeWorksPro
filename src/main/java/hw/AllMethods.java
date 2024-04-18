@@ -286,13 +286,13 @@ public class AllMethods {
      * Вывести список лиц, проживающих в квартирах (номер квартиры не равен 0).
      */
     public static List<Person> findWhoLiveInFlatZero(List<Person> personList){
-        List<Person> list = new ArrayList<>();
+        List<Person> list1 = new ArrayList<>();
         for (int i = 0; i < personList.size(); i++) {
             if(personList.get(i).getAddress().getNumberOfFlat() == 0){
-                list.add(personList.get(i));
+                list1.add(personList.get(i));
             }
         }
-        return list;
+        return list1;
     }
     /**
      * Найти и вывести лиц, чьи автомобили имеют стоимость выше заданной.
