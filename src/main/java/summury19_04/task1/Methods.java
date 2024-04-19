@@ -1,8 +1,7 @@
-package summury19_04;
+package summury19_04.task1;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Methods {
