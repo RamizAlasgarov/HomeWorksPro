@@ -20,8 +20,7 @@ public class Task {
         int count = 0;
         String intToBinarySystem = Integer.toBinaryString(k);
         char[] charArray = intToBinarySystem.toCharArray();
-        System.out.println(Arrays.toString(charArray));
-        for (char i = 0; i < charArray.length; i++) {
+        for (int i = 0; i < charArray.length; i++) {
             if(charArray[i] == 1){
                 count++;
             }
