@@ -8,7 +8,7 @@ import java.util.function.IntBinaryOperator;
 public class Task {
     public static void main(String[] args) {
         Task task = new Task();
-        System.out.println(task.get1Count(2));
+        System.out.println(task.get1Count(7));
     }
     /**
      *
@@ -19,9 +19,12 @@ public class Task {
     public int get1Count(int k) {
         int count = 0;
         String intToBinarySystem = Integer.toBinaryString(k);
+        System.out.println(intToBinarySystem);
+        System.out.println("********");
         char[] charArray = intToBinarySystem.toCharArray();
+        System.out.println(Arrays.toString(charArray));
         for (int i = 0; i < charArray.length; i++) {
-            if(charArray[i] == 1){
+            if(charArray[i] % 2 ==  1){
                 count++;
             }
         }
