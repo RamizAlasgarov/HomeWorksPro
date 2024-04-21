@@ -1,5 +1,6 @@
 package doTasks._2024_04_17.taski;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -161,6 +162,12 @@ public class FigureTasks {
      * 9. Напишите метод для нахождения всех кругов, у которых радиус равен любой из сторон любого треугольника.
      */
     public static List<Circle> findCirclesWithRadiusEqualToTriangleSide(List<Figure> figures) {
+//        List<Integer> list = new ArrayList<>();
+//        for (Figure figure : figures) {
+//            if(figure instanceof Circle){
+//                list.add(((Circle) figure).getRadius());
+//            }
+//        }
 //        List<Circle> circles = new ArrayList<>();
 //        for (Figure figure : figures){
 //            if(figure instanceof Triangle){
