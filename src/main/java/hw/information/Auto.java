@@ -1,6 +1,6 @@
 package hw.information;
 
-import hw.enums.Color;
+import hw.enums.Color1;
 import hw.enums.Model;
 
 /**
@@ -21,9 +21,9 @@ public class Auto {
     private int horsePower;
     private int price;
     private int yearOfProduction;
-    private Color colors;
+    private Color1 colors;
 
-    public Auto(Model model, int doorCount, boolean isSport, int horsePower, int price, int yearOfProduction, Color colors) {
+    public Auto(Model model, int doorCount, boolean isSport, int horsePower, int price, int yearOfProduction, Color1 colors) {
         this.model = model;
         this.doorCount = doorCount;
         this.isSport = isSport;
@@ -81,11 +81,11 @@ public class Auto {
         this.yearOfProduction = yearOfProduction;
     }
 
-    public Color getColors() {
+    public Color1 getColors() {
         return colors;
     }
 
-    public void setColors(Color colors) {
+    public void setColors(Color1 colors) {
         this.colors = colors;
     }
 }
