@@ -2,6 +2,7 @@ package doTasks._2024_04_17.taski;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 
 public class FigureTasks {
@@ -162,6 +163,37 @@ public class FigureTasks {
      * 9. Напишите метод для нахождения всех кругов, у которых радиус равен любой из сторон любого треугольника.
      */
     public static List<Circle> findCirclesWithRadiusEqualToTriangleSide(List<Figure> figures) {
+//        boolean triangle = false;
+//        Triangle trianglefirstSide = null;
+//        Triangle triangleSecondSide = null;
+//        Triangle triangleThirdSide = null;
+        List<Integer> circleList = new ArrayList<>();
+        List<Integer> triangleList = new ArrayList<>();
+        List<Integer> resultList = new ArrayList<>();
+        for (Figure figure : figures) {
+            if(figure instanceof Circle){
+                circleList.add(((Circle) figure).getRadius());
+            }else if(figure instanceof Triangle){
+//                triangle = true;
+//                trianglefirstSide.getA();
+            }
+        }
+        System.out.println(circleList);
+        for (Figure figure : figures) {
+            if(figure instanceof Triangle){
+
+                triangleList.add(((Triangle) figure).getA()+ ((Triangle) figure).getB()+((Triangle) figure).getC());
+            }
+        }
+        System.out.println(triangleList);
+        for (int i = 0; i < circleList.size(); i++) {
+            for (int j = 0; j < triangleList.size(); j++) {
+                if(circleList.get(i).equals(triangleList.get(j))){
+                    resultList.add(circleList.get(i));
+                }
+            }
+        }
+        System.out.println(resultList);
 //        List<Integer> list = new ArrayList<>();
 //        for (Figure figure : figures) {
 //            if(figure instanceof Circle){
@@ -197,6 +229,9 @@ public class FigureTasks {
 
     // Helper method to determine if two figures have at least one matching parameter
     private static boolean figuresMatch(Figure a, Figure b) {
+        if(a instanceof Triangle){
+
+        }
         return false;
     }
 
@@ -204,7 +239,26 @@ public class FigureTasks {
      * 13. Напишите метод для нахождения кругов, у которых радиус больше суммы сторон любого треугольника в списке.
      */
     public static List<Circle> findCirclesWithRadiusGreaterThanSumOfAnyTriangleSides(List<Figure> figures) {
-
+        List<Integer> circles = new ArrayList<>();
+        List<Integer> sumOfTriangle = new ArrayList<>();
+        List<Integer> circleList = new ArrayList<>();
+        for (Figure f : figures){
+            if(f instanceof Triangle){
+                sumOfTriangle.add(((Triangle) f).getA()+ ((Triangle) f).getB()+((Triangle) f).getC());
+            }
+        }
+        for (Figure figure : figures) {
+            if(figure instanceof Circle){
+                circles.add(((Circle) figure).getRadius());
+            }
+        }
+        for (int i = 0; i < circles.size(); i++) {
+            for (int j = 0; j < sumOfTriangle.size(); j++) {
+                if(circles.get(i) > sumOfTriangle.get(i)){
+                    circleList.add(sumOfTriangle.get(i));
+                }
+            }
+        }
         return null;
     }
 

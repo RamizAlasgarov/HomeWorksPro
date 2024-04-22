@@ -1,13 +1,10 @@
 package _24_04_18;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.function.IntBinaryOperator;
 
-public class Task {
+public class IntToBinarySystem {
     public static void main(String[] args) {
-        Task task = new Task();
+        IntToBinarySystem task = new IntToBinarySystem();
         System.out.println(task.get1Count(7));
     }
     /**

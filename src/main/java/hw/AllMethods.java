@@ -1,6 +1,6 @@
 package hw;
 
-import hw.enums.Color;
+import hw.enums.Color1;
 import hw.enums.Country;
 import hw.enums.Model;
 import hw.information.Address;
@@ -212,7 +212,7 @@ public class AllMethods {
     /**
      * Найти лиц с автомобилями определенной марки и цвета.
      */
-    public static List<Person> findSameCarAndColor(List<Person> personList, Model model,Color color){
+    public static List<Person> findSameCarAndColor(List<Person> personList, Model model,Color1 color){
         List<Person> nameList = new ArrayList<>();
         for (int i = 0; i < personList.size()-1; i++) {
             if(personList.get(i).getAuto().getModel().equals(model) && personList.get(i).getAuto().getColors().equals(color)){
@@ -272,7 +272,7 @@ public class AllMethods {
     /**
      * Найти лиц, у которых есть автомобиль определенного цвета, но не спортивный.
      */
-        public static List<String> findNotSportCarsColor(List<Person> personList,Color color){
+        public static List<String> findNotSportCarsColor(List<Person> personList,Color1 color){
             List<String> resultList = new ArrayList<>();
             for (int i = 0; i < personList.size(); i++) {
                 if(!personList.get(i).getAuto().isSport() && personList.get(i).getAuto().getColors().equals(color)){

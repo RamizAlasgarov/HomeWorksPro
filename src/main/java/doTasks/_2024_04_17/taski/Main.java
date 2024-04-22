@@ -1,5 +1,6 @@
 package doTasks._2024_04_17.taski;
 
+import doTasks._2024_04_17.taski.A.MapTask;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,25 +14,24 @@ public class Main {
         List<Figure> list = FigureGenerator.generateFigures();
 //        System.out.println(FigureTasks.findRectangleWithMaxArea(list));
 //        System.out.println(FigureTasks.countTrianglesWithSideGreaterThan(list,23));
+//        System.out.println(FigureTasks.findCirclesWithRadiusEqualToTriangleSide(list));
+        System.out.println(MapTask.countCirclesOfColor(list));
 
     }
 }
 
-@ToString
-class Figure {
 
-}
 
-@ToString
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-class Rectangle extends Figure {
-    private Color color;
-    private int a;
-    private int b;
-
-}
+//@ToString
+//@AllArgsConstructor
+//@NoArgsConstructor
+//@Getter
+//class Rectangle extends Figure {
+//    private Color color;
+//    private int a;
+//    private int b;
+//
+//}
 
 @ToString
 @AllArgsConstructor
@@ -45,22 +45,6 @@ class Triangle extends Figure {
 
 }
 
-@ToString
-@AllArgsConstructor
-class Circle extends Figure {
-    private Color color;
-    private int radius;
 
-    public Color getColor() {
-        return color;
-    }
 
-    public int getRadius() {
-        return radius;
-    }
-}
 
-@ToString
-enum Color {
-    RED, BLACK, WHITE, BLUE, GREEN, YELLOW, ORANGE, PINK, PURPLE, MULTICOLOR
-}

@@ -1,7 +1,7 @@
 package hw;
 
 import com.github.javafaker.Faker;
-import hw.enums.Color;
+import hw.enums.Color1;
 import hw.enums.Country;
 import hw.enums.Currency;
 import hw.enums.Model;
@@ -26,10 +26,10 @@ public class Demo {
         Address address2 = new Address(Country.USA, "blinkin street", 12,34);
         List<Address> addresses = List.of(address, address1, address2);
 
-        Auto auto = new Auto(Model.BMW, 4, true, 700, 40_000, 2024, Color.RED);
-        Auto auto2 = new Auto(Model.AUDI, 3, true, 1000, 70000, 2015, Color.RED);
-        Auto auto3 = new Auto(Model.BMW, 4, false, 300, 20_000, 1999, Color.SILVER);
-        Auto auto4 = new Auto(Model.Mers, 4, false, 800, 20_000, 2023, Color.WHITE);
+        Auto auto = new Auto(Model.BMW, 4, true, 700, 40_000, 2024, Color1.RED);
+        Auto auto2 = new Auto(Model.AUDI, 3, true, 1000, 70000, 2015, Color1.RED);
+        Auto auto3 = new Auto(Model.BMW, 4, false, 300, 20_000, 1999, Color1.SILVER);
+        Auto auto4 = new Auto(Model.Mers, 4, false, 800, 20_000, 2023, Color1.WHITE);
         List<Auto> autos = List.of(auto, auto2, auto3,auto4);
 
         Account account = new Account(Currency.USD, 5000, 10);

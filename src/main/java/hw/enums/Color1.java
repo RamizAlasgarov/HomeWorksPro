@@ -1,6 +1,6 @@
 package hw.enums;
 
-public enum Color {
+public enum Color1 {
     WHITE,
     RED,
     SILVER;
