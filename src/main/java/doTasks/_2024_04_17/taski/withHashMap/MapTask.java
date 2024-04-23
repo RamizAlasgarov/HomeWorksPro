@@ -86,7 +86,7 @@ public class MapTask {
     public static Map<String, Boolean> hasRectangleAndTriangleOfSameColor(List<Figure> figures) {
         Map<String,Boolean> sameColor = new HashMap<>();
         for (Figure figure : figures) {
-            if(figure instanceof Rectangle || figure instanceof Triangle){
+            if(figure instanceof Rectangle ){
                 Rectangle rectangle = (Rectangle) figure;
                 String color = String.valueOf(rectangle.getColor());
                 boolean a = sameColor.getOrDefault(color,false);
