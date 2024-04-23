@@ -66,20 +66,41 @@ public class MapTask {
 
     //Find circles with radius equal to any triangle side:
     //Найдите окружности, радиус которых равен любой стороне треугольника:
-    public static Map<Circle, Boolean> findCirclesWithRadiusEqualToTriangleSide(List<Figure> figures) {
-        Map<Circle,Boolean> circleRadiusEqualsTriangle = new HashMap<>();
+    public static Map<Circle, Triangle> findCirclesWithRadiusEqualToTriangleSide(List<Figure> figures) {
+        Map<Circle, Triangle> result = new HashMap<>();
+        List<Circle> circles = new ArrayList<>();
+        List<Triangle> triangles = new ArrayList<>();
+
         for (Figure figure : figures) {
-            if(figures instanceof Circle) {
-                Circle circle = (Circle) figures;
-                if(circleRadiusEqualsTriangle.containsKey(circle.getRadius())){
-                }
+            if (figure instanceof Circle) {
+                circles.add((Circle) figure);
+            }
+
+            if (figure instanceof Triangle) {
+                triangles.add((Triangle) figure);
             }
         }
 
+        for (Circle circle : circles) {
+            for (Triangle triangle : triangles) {
+                int a = triangle.getA();
+                int b = triangle.getB();
+                int c = triangle.getC();
 
+                int radius = circle.getRadius();
 
-        return null;
+                if(radius == a || radius == b || radius == c){
+                    result.put(circle, triangle);
+//                } else {
+//                    result.put(circle, false);
+                }
+            }
+        }
+        System.out.println(result.size());
+        return result;
     }
+
+
 
     //Determine if there's a rectangle and triangle of the same color:
     //Определите, есть ли прямоугольник и треугольник одного цвета
