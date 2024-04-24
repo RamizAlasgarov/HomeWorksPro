@@ -61,21 +61,17 @@ public class MapTask {
     public static Map<Rectangle, Double> findRectangleWithLargestDiagonalToPerimeterRatio(List<Figure> figures) {
         Map<Rectangle, Double> rectangleRatios = new HashMap<>();
         List<Rectangle> rectangleList = new ArrayList<>();
-        List<Circle> circleList = new ArrayList<>();
         for (Figure figure : figures) {
             if (figure instanceof Rectangle) {
                 rectangleList.add((Rectangle) figure);
             }
-            if (figure instanceof Circle) {
-                circleList.add((Circle) figure);
-            }
         }
         for (Rectangle rectangle : rectangleList) {
-            int perimetr = 2 * (rectangle.getA() + rectangle.getB());
-            int a = rectangle.getA();
-            int b = rectangle.getB();
-
-
+            int perimeter = 2 * (rectangle.getA() + rectangle.getB());
+            int diagonal = rectangle.getA() * rectangle.getA() + rectangle.getB() * rectangle.getB();
+            if(diagonal > perimeter){
+                rectangleRatios.put(rectangle,(double)diagonal);
+            }
         }
         return rectangleRatios;
     }

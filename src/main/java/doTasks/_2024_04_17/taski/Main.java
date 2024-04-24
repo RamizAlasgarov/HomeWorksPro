@@ -17,7 +17,8 @@ public class Main {
 //        System.out.println(FigureTasks.findCirclesWithRadiusEqualToTriangleSide(list));
 //        System.out.println(MapTask.countCirclesOfColor(list));
 //        System.out.println(MapTask.sumOfRadiiForColor(list));
-        System.out.println(MapTask.hasRectangleAndTriangleOfSameColor(list));
+//        System.out.println(MapTask.hasRectangleAndTriangleOfSameColor(list));
+        System.out.println(MapTask.findRectangleWithLargestDiagonalToPerimeterRatio(list));
 
     }
 }
