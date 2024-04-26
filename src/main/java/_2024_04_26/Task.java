@@ -8,12 +8,13 @@ public class Task {
 
             Map<String, List<Double>> nameToMarks = Map.of(
                     "Tom", new ArrayList<>(),
-                    "Jerry", Arrays.asList(5.0,5.0)
-//                "Ban", List.of(4.0,4.0),
-//                "Max", List.of(3.0,3.0),
-//                "Alex", List.of(0.0,0.0)
+                    "Jerry", Arrays.asList(5.0,5.0),
+                "Ban", List.of(4.0,4.0),
+                "Max", List.of(3.0,3.0),
+                "Alex", List.of(0.0,0.0)
             );
             System.out.println(getAverageMark(nameToMarks));
+        System.out.println(getWordRepetition("mi edem edem edem v dalekiye kraya"));
 
 
     }
@@ -44,6 +45,22 @@ public class Task {
             nameToAverage.put(e.getKey(), average);
         }
         return nameToAverage;
+    }
+    /**
+     * Реализуйте метод, который принимает на вход строку и возвращает Map,
+     * где ключ - это слово, а значение - количество его повторений в строке.
+     */
+    public static Map<String,Integer> getWordRepetition (String sentence) {
+        Map<String,Integer> wordToCount = new HashMap<>();
+        for (String word : sentence.split(" ")) {
+            if (wordToCount.containsKey(word)){
+                int current =  wordToCount.get(word);
+                wordToCount.put(word,current+1);
+            } else {
+                wordToCount.put(word,1);
+            }
+        }
+        return wordToCount;
     }
 
 }
