@@ -5,7 +5,11 @@ import java.util.Arrays;
 public class IntToBinarySystem {
     public static void main(String[] args) {
         IntToBinarySystem task = new IntToBinarySystem();
-        System.out.println(task.get1Count(7));
+//        System.out.println(task.get1Count(5));
+//        System.out.println(countOnes(5));
+        int i = 0b00000011;
+        System.out.println(i);
+        System.out.println(i >>> 1);
     }
     /**
      *
@@ -28,4 +32,13 @@ public class IntToBinarySystem {
         System.out.println("***********");
         return count;
     }
+    public static int countOnes(int num) {
+        int count = 0;
+        while (num != 0) {
+            count = count + num & 1;
+            num = num >>> 1;
+        }
+        return count;
+    }
+
 }
