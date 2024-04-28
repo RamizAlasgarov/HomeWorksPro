@@ -1,9 +1,9 @@
-package doTasks._2024_04_17.taski.withHashMap;
+package _2024_04_07HWEND._2024_04_17.taski.withHashMap;
 
 
 import java.util.*;
 
-import doTasks._2024_04_17.taski.*;
+import _2024_04_07HWEND._2024_04_17.taski.*;
 
 public class MapTask {
     //Count circles of a given color:

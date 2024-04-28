@@ -1,7 +1,6 @@
-package doTasks._2024_04_17.taski;
+package _2024_04_07HWEND._2024_04_17.taski;
 
 import lombok.AllArgsConstructor;
-import lombok.ToString;
 
 @AllArgsConstructor
 public class Circle extends Figure{

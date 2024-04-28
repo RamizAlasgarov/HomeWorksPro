@@ -20,6 +20,7 @@ public class  Parcer {
 
         Patient patient = new Patient();
         String[] array = info.split(" ");
+        System.out.println(Arrays.toString(array) + "end");
         patient.setId(Integer.parseInt(array[0]));
         patient.setName(array[1]);
         patient.setSurname(array[2]);

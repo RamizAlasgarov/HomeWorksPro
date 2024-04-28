@@ -1,8 +1,7 @@
-package doTasks._2024_04_17.taski;
+package _2024_04_07HWEND._2024_04_17.taski;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 
 public class FigureTasks {
