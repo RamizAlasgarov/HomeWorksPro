@@ -1,6 +1,6 @@
 package doTasks._2024_04_17.taski;
 
-import doTasks._2024_04_17.taski.A.MapTask;
+import doTasks._2024_04_17.taski.withHashMap.MapTask;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,7 +15,10 @@ public class Main {
 //        System.out.println(FigureTasks.findRectangleWithMaxArea(list));
 //        System.out.println(FigureTasks.countTrianglesWithSideGreaterThan(list,23));
 //        System.out.println(FigureTasks.findCirclesWithRadiusEqualToTriangleSide(list));
-        System.out.println(MapTask.countCirclesOfColor(list));
+//        System.out.println(MapTask.countCirclesOfColor(list));
+//        System.out.println(MapTask.sumOfRadiiForColor(list));
+//        System.out.println(MapTask.hasRectangleAndTriangleOfSameColor(list));
+        System.out.println(MapTask.findRectangleWithLargestDiagonalToPerimeterRatio(list));
 
     }
 }
@@ -32,18 +35,6 @@ public class Main {
 //    private int b;
 //
 //}
-
-@ToString
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-class Triangle extends Figure {
-    private Color color;
-    private int a;
-    private int b;
-    private int c;
-
-}
 
 
 
