@@ -86,10 +86,24 @@ public class StackQueueExercises {
 
     // Задача 3: Сортировка стека.
     public static void sortStack(Stack<Integer> stack) {
+        int tempVariable = 0;
         Stack<Integer> tempStack = new Stack<>();
+        for (int i = 0; i < stack.size()-1; i++) {
+            for (int j = 0; j < stack.size()-i-1; j++) {
+                int cur = stack.pop();
+                int next = stack.peek()+j;
+                if(cur>next){
+                    stack.pop();
+                    tempStack.push(cur);
+                    tempStack.push(next);
+                } else {
+                    tempStack.push(cur);
+                }
+                }
+            }
 
+        }
 
-    }
 
     // Задача 4: Первый неповторяющийся символ.
     public static void firstNonRepeating(String stream) {
