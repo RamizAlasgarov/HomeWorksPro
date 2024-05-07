@@ -1,8 +1,8 @@
-package _2024_05_03summury.iceCream;
+package _2024_05_05summury.iceCream;
 
-import _2024_05_03summury.iceCream.sweet.Cone;
-import _2024_05_03summury.iceCream.sweet.Decustator;
-import _2024_05_03summury.iceCream.sweet.IceCreamBall;
+import _2024_05_05summury.iceCream.sweet.Cone;
+import _2024_05_05summury.iceCream.sweet.Decustator;
+import _2024_05_05summury.iceCream.sweet.IceCreamBall;
 
 /**
  * Создайте класс Рожок для мороженого.

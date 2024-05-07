@@ -1,4 +1,4 @@
-package _2024_05_03summury.rollingStock;
+package _2024_05_05summury.rollingStock;
 
 public class Vagon {
     private int id;

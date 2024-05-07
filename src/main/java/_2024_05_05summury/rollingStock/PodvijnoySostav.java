@@ -1,8 +1,7 @@
-package _2024_05_03summury.rollingStock;
+package _2024_05_05summury.rollingStock;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.LinkedList;
 
 public class PodvijnoySostav {
     private Deque<Vagon> vagons;
