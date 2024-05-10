@@ -1,10 +1,12 @@
 package _2024_05_07.testCollection;
 
+import lombok.Getter;
 import lombok.ToString;
 
 import java.util.List;
 
 @ToString
+@Getter
 public class House {
 
     List<Flat> flats;
