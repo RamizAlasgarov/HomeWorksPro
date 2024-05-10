@@ -91,6 +91,7 @@ class Box {
 
 class Main {
     public static void main(String[] args) {
-
+        List<House> houseList = HouseGenerator.generateHouses(1);
+        System.out.println(houseList);
     }
 }
