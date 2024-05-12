@@ -72,14 +72,14 @@ public class HouseCollectionTasks_1 {
     }
     
     public static void main(String[] args) {
-        List<House> houses = HouseGenerator.generateHouses(1);
-
+        List<House> houses = HouseGenerator.generateHouses(10);
+        System.out.println(houses);
 //        System.out.println("Все квартиры: " + getAllFlats(houses).size());
-        houses.forEach(System.out::println);
+//        houses.forEach(System.out::println);
 //        System.out.println("Уникальные цвета комнат: " + getUniqueRoomColors(houses).size());
 //        System.out.println(houses.stream().flatMap(h -> h.flats.stream()).flatMap(f -> f.roomList.stream()).map(r -> r.color).collect(Collectors.toSet()));
 //        System.out.println("Квартиры по этажам: " + getFlatsCountByFloor(houses.get(0)));
 //        System.out.println("Номера квартир по порядку: " + getFlatNumbersInOrder(houses.get(0)));
-        System.out.println("Квартиры в обратном порядке: " + getFlatsInReverseOrder(houses.get(0)));
+//        System.out.println("Квартиры в обратном порядке: " + getFlatsInReverseOrder(houses.get(0)));
     }
 }
