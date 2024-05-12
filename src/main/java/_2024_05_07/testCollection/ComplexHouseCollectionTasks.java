@@ -4,20 +4,46 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ComplexHouseCollectionTasks {
 
     // Задание 1: Вернуть список коробок, которые пролезут в дверной проем по высоте во всех домах (List)
     public static List<Box> getBoxesThatFitThroughDoorways(List<House> houses) {
+        Doorway doorway = new Doorway();
         List<Box> fittingBoxes = new ArrayList<>();
 
+        // Просто пытался сделать через стримы но не до конца получилось
+        //List<Stream<Double>> boxes = houses.stream().map(l->l.flats.stream().flatMap(r->r.roomList.stream().flatMap(b->b.boxes.stream().map(d->d.height)))).collect(Collectors.toList());;
+
+        for (House house : houses) {
+            for (Flat flat : house.flats) {
+                for (Room room : flat.roomList) {
+                    for (Box box : room.boxes) {
+                        if(box.height < doorway.height){
+                            fittingBoxes.add(box);
+                        }
+                    }
+                }
+            }
+        }
         return fittingBoxes;
     }
+
 
     // Задание 2: Вернуть количество квартир, в которых хотя бы одна комната не содержит коробок (List)
     public static int countFlatsWithEmptyRooms(List<House> houses) {
         int count = 0;
-
+        for (House house : houses) {
+            for (Flat flat : house.flats) {
+                for (Room room : flat.roomList) {
+                    if(room.boxes.isEmpty()){
+                        count++;
+                    }
+                }
+            }
+        }
         return count;
     }
 
