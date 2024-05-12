@@ -58,8 +58,8 @@ public class MoreAdvancedHouseCollectionTasks {
             for (Flat flat : house.flats) {
 
 //                for (Room room : flat.roomList) {
-//                    if(flat.floor == 7){
-//                        totalRooms += room.;
+//                    if(flat.floor == Math.max(1,10)){
+//                        totalRooms += room;
 //                    }
 //                }
             }
@@ -70,7 +70,13 @@ public class MoreAdvancedHouseCollectionTasks {
     // Задание 5: Подсчитать суммарное количество комнат в квартирах, окрашенных в определенный цвет (Map)
     public static Map<Color, Integer> countRoomsByColor(List<House> houses) {
         Map<Color, Integer> roomColorCounts = new HashMap<>();
-
+        for (House house : houses) {
+            for (Flat flat : house.flats) {
+                for (Room room : flat.roomList) {
+                    roomColorCounts.put(room.color, (int) room.length);
+                }
+            }
+        }
         return roomColorCounts;
     }
 
