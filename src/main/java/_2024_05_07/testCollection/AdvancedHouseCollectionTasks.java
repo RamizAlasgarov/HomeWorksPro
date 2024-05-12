@@ -11,6 +11,7 @@ public class AdvancedHouseCollectionTasks {
     public static List<Integer> getFlatsWithMoreRoomsThanAverage(List<House> houses) {
         List<Integer> flatNumbers = new ArrayList<>();
 
+
         return flatNumbers;
     }
 
