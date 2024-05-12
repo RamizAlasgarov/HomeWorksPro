@@ -1,9 +1,6 @@
 package _2024_05_07.testCollection;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -51,20 +48,43 @@ public class ComplexHouseCollectionTasks {
     public static double getAverageDoorwayHeight(List<House> houses) {
         double totalHeight = 0;
         int count = 0;
+        for (House house : houses) {
+            for (Flat flat : house.flats) {
+                for (Room room : flat.roomList) {
+                    totalHeight+=room.height;
+                    count++;
+                }
+            }
+        }
 
         return count > 0 ? totalHeight / count : 0;
     }
 
     // Задание 4: Определить, есть ли дом, где каждая квартира имеет хотя бы одну зеленую комнату (List)
     public static boolean isThereAHouseWithAllFlatsHavingAGreenRoom(List<House> houses) {
-
+        for (House house : houses) {
+            for (Flat flat : house.flats) {
+                for (Room room : flat.roomList) {
+                    if(Objects.equals(room.color,"green")){
+                        return true;
+                    }
+                }
+            }
+        }
         return false;
     }
 
     // Задание 5: Вернуть карту, где ключи — это номера этажей, а значения — списки всех коробок на этом этаже (List, Map)
     public static Map<Integer, List<Box>> getBoxesPerFloor(List<House> houses) {
         Map<Integer, List<Box>> boxesByFloor = new HashMap<>();
+        for (House house : houses) {
+            for (Flat flat : house.flats) {
+                for (Room room : flat.roomList) {
+                    boxesByFloor.put(flat.floor,room.boxes);
+                }
 
+            }
+        }
         return boxesByFloor;
     }
 
