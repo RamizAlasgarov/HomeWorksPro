@@ -16,11 +16,11 @@ public class ComplexHouseCollectionTasks {
         for (House house : houses) {
             for (Flat flat : house.flats) {
                 for (Room room : flat.roomList) {
+                    if(room.boxes == null){
+                        throw new BoxNotFoundException(ErrorMessage.BOX_NOT_FOUND);
+                    }
                     for (Box box : room.boxes) {
-                        if(box == null){
-                            throw new BoxNotFoundException(ErrorMessage.BOX_NOT_FOUND);
-                        }
-                        if(box.height < doorway.height){
+                        if (box.height < doorway.height) {
                             fittingBoxes.add(box);
                         }
                     }
@@ -35,18 +35,19 @@ public class ComplexHouseCollectionTasks {
     public static int countFlatsWithEmptyRooms(List<House> houses) throws RoomNotFoundException {
         int count = 0;
         for (House house : houses) {
-            if(house.flats == null){
+            if (house.flats == null) {
                 throw new FlatNotFoundException(ErrorMessage.FLAT_NOT_FOUND);
             }
             for (Flat flat : house.flats) {
+                if (flat.roomList == null) {
+                    throw new RoomNotFoundException(ErrorMessage.ROOM_NOT_FOUND);
+                }
                 for (Room room : flat.roomList) {
-                    if(room == null){
-                        throw new RoomNotFoundException(ErrorMessage.ROOM_NOT_FOUND);
-                    }
-                    if(room.boxes == null){
+
+                    if (room.boxes == null) {
                         throw new BoxNotFoundException(ErrorMessage.BOX_NOT_FOUND);
                     }
-                    if(room.boxes.isEmpty()){
+                    if (room.boxes.isEmpty()) {
                         count++;
                     }
                 }
@@ -56,13 +57,19 @@ public class ComplexHouseCollectionTasks {
     }
 
     // Задание 3: Вернуть среднюю высоту дверных проемов всех комнат во всех домах (List)
-    public static double getAverageDoorwayHeight(List<House> houses) {
+    public static double getAverageDoorwayHeight(List<House> houses) throws HouseNotFoundException {
         double totalHeight = 0;
         int count = 0;
         for (House house : houses) {
+            if (house == null) {
+                throw new HouseNotFoundException(ErrorMessage.HOUSE_NOT_FOUND);
+            }
             for (Flat flat : house.flats) {
+                if (flat == null) {
+                    throw new FlatNotFoundException(ErrorMessage.FLAT_NOT_FOUND);
+                }
                 for (Room room : flat.roomList) {
-                    totalHeight+=room.height;
+                    totalHeight += room.height;
                     count++;
                 }
             }
@@ -72,11 +79,17 @@ public class ComplexHouseCollectionTasks {
     }
 
     // Задание 4: Определить, есть ли дом, где каждая квартира имеет хотя бы одну зеленую комнату (List)
-    public static boolean isThereAHouseWithAllFlatsHavingAGreenRoom(List<House> houses) {
+    public static boolean isThereAHouseWithAllFlatsHavingAGreenRoom(List<House> houses) throws ColorNotFoundException {
         for (House house : houses) {
             for (Flat flat : house.flats) {
+                if (flat == null) {
+                    throw new FlatNotFoundException(ErrorMessage.FLAT_NOT_FOUND);
+                }
                 for (Room room : flat.roomList) {
-                    if(Objects.equals(room.color,"green")){
+                    if(room.color == null){
+                        throw new ColorNotFoundException(ErrorMessage.COLOR_NOT_FOUNDED);
+                    }
+                    if (Objects.equals(room.color, "green")) {
                         return true;
                     }
                 }
@@ -86,12 +99,21 @@ public class ComplexHouseCollectionTasks {
     }
 
     // Задание 5: Вернуть карту, где ключи — это номера этажей, а значения — списки всех коробок на этом этаже (List, Map)
-    public static Map<Integer, List<Box>> getBoxesPerFloor(List<House> houses) {
+    public static Map<Integer, List<Box>> getBoxesPerFloor(List<House> houses) throws HouseNotFoundException, RoomNotFoundException {
         Map<Integer, List<Box>> boxesByFloor = new HashMap<>();
         for (House house : houses) {
+            if(house == null){
+                throw new HouseNotFoundException(ErrorMessage.HOUSE_NOT_FOUND);
+            }
             for (Flat flat : house.flats) {
+                if(flat == null){
+                    throw new FlatNotFoundException(ErrorMessage.FLAT_NOT_FOUND);
+                }
                 for (Room room : flat.roomList) {
-                    boxesByFloor.put(flat.floor,room.boxes);
+                    if(room == null){
+                        throw new RoomNotFoundException(ErrorMessage.ROOM_NOT_FOUND);
+                    }
+                    boxesByFloor.put(flat.floor, room.boxes);
                 }
 
             }
@@ -99,36 +121,51 @@ public class ComplexHouseCollectionTasks {
         return boxesByFloor;
     }
 
-    public static void main(String[] args) throws RoomNotFoundException {
+    public static void main(String[] args) throws RoomNotFoundException, HouseNotFoundException, ColorNotFoundException {
         List<House> houses = HouseGenerator.generateHouses(777);
 
-        System.out.println("Коробки, подходящие по высоте для дверных проемов: " + getBoxesThatFitThroughDoorways(houses).size());
-        System.out.println("Квартиры с хотя бы одной пустой комнатой: " + countFlatsWithEmptyRooms(houses));
+//        System.out.println("Коробки, подходящие по высоте для дверных проемов: " + getBoxesThatFitThroughDoorways(houses).size());
+//        System.out.println("Квартиры с хотя бы одной пустой комнатой: " + countFlatsWithEmptyRooms(houses));
         System.out.println("Средняя высота дверных проемов: " + getAverageDoorwayHeight(houses));
-        System.out.println("Дом с квартирами, в каждой из которых есть зеленая комната: " + isThereAHouseWithAllFlatsHavingAGreenRoom(houses));
-        System.out.println("Коробки по этажам: " + getBoxesPerFloor(houses));
+//        System.out.println("Дом с квартирами, в каждой из которых есть зеленая комната: " + isThereAHouseWithAllFlatsHavingAGreenRoom(houses));
+//        System.out.println("Коробки по этажам: " + getBoxesPerFloor(houses));
     }
 }
 
-class BoxNotFoundException extends RuntimeException{
+class BoxNotFoundException extends RuntimeException {
     public BoxNotFoundException(String message) {
         super(message);
     }
 }
 
-class FlatNotFoundException extends RuntimeException{
+class FlatNotFoundException extends RuntimeException {
     public FlatNotFoundException(String message) {
         super(message);
     }
 }
-class RoomNotFoundException extends Exception{
+
+class RoomNotFoundException extends Exception {
     public RoomNotFoundException(String message) {
         super(message);
     }
 }
-class ErrorMessage{
-    public static final String BOX_NOT_FOUND = "BOX_NOT_FOUND";
-    public static final String FLAT_NOT_FOUND = "FLAT_NOT_FOUND";
-    public static final String ROOM_NOT_FOUND = "ROOM_NOT_FOUND";
+
+class HouseNotFoundException extends Exception {
+    public HouseNotFoundException(String message) {
+        super(message);
+    }
+}
+class ColorNotFoundException extends Exception{
+    public ColorNotFoundException(String message) {
+        super(message);
+    }
+}
+
+class ErrorMessage {
+    public static final String BOX_NOT_FOUND = "BOX_NOT_FOUNDED";
+    public static final String FLAT_NOT_FOUND = "FLAT_NOT_FOUNDED";
+    public static final String ROOM_NOT_FOUND = "ROOM_NOT_FOUNDED";
+    public static final String HOUSE_NOT_FOUND = "HOUSE_NOT_FOUNDED";
+    public static final String COLOR_NOT_FOUNDED = "COLOR_NOT_FOUNDED";
 }
 
