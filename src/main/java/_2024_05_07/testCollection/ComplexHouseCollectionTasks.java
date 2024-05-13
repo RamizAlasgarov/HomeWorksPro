@@ -13,11 +13,13 @@ public class ComplexHouseCollectionTasks {
 
         // Просто пытался сделать через стримы но не до конца получилось
         //List<Stream<Double>> boxes = houses.stream().map(l->l.flats.stream().flatMap(r->r.roomList.stream().flatMap(b->b.boxes.stream().map(d->d.height)))).collect(Collectors.toList());;
-
         for (House house : houses) {
             for (Flat flat : house.flats) {
                 for (Room room : flat.roomList) {
                     for (Box box : room.boxes) {
+                        if(box == null){
+                            throw new BoxNotFoundException(ErrorMessage.BOX_NOT_FOUND);
+                        }
                         if(box.height < doorway.height){
                             fittingBoxes.add(box);
                         }
@@ -30,11 +32,20 @@ public class ComplexHouseCollectionTasks {
 
 
     // Задание 2: Вернуть количество квартир, в которых хотя бы одна комната не содержит коробок (List)
-    public static int countFlatsWithEmptyRooms(List<House> houses) {
+    public static int countFlatsWithEmptyRooms(List<House> houses) throws RoomNotFoundException {
         int count = 0;
         for (House house : houses) {
+            if(house.flats == null){
+                throw new FlatNotFoundException(ErrorMessage.FLAT_NOT_FOUND);
+            }
             for (Flat flat : house.flats) {
                 for (Room room : flat.roomList) {
+                    if(room == null){
+                        throw new RoomNotFoundException(ErrorMessage.ROOM_NOT_FOUND);
+                    }
+                    if(room.boxes == null){
+                        throw new BoxNotFoundException(ErrorMessage.BOX_NOT_FOUND);
+                    }
                     if(room.boxes.isEmpty()){
                         count++;
                     }
@@ -88,7 +99,7 @@ public class ComplexHouseCollectionTasks {
         return boxesByFloor;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws RoomNotFoundException {
         List<House> houses = HouseGenerator.generateHouses(777);
 
         System.out.println("Коробки, подходящие по высоте для дверных проемов: " + getBoxesThatFitThroughDoorways(houses).size());
@@ -98,3 +109,26 @@ public class ComplexHouseCollectionTasks {
         System.out.println("Коробки по этажам: " + getBoxesPerFloor(houses));
     }
 }
+
+class BoxNotFoundException extends RuntimeException{
+    public BoxNotFoundException(String message) {
+        super(message);
+    }
+}
+
+class FlatNotFoundException extends RuntimeException{
+    public FlatNotFoundException(String message) {
+        super(message);
+    }
+}
+class RoomNotFoundException extends Exception{
+    public RoomNotFoundException(String message) {
+        super(message);
+    }
+}
+class ErrorMessage{
+    public static final String BOX_NOT_FOUND = "BOX_NOT_FOUND";
+    public static final String FLAT_NOT_FOUND = "FLAT_NOT_FOUND";
+    public static final String ROOM_NOT_FOUND = "ROOM_NOT_FOUND";
+}
+
