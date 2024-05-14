@@ -60,10 +60,11 @@ public class ComplexHouseCollectionTasks {
     public static double getAverageDoorwayHeight(List<House> houses) throws HouseNotFoundException {
         double totalHeight = 0;
         int count = 0;
+        if (houses == null) {
+            throw new HouseNotFoundException(ErrorMessage.HOUSE_NOT_FOUND);
+        }
         for (House house : houses) {
-            if (house == null) {
-                throw new HouseNotFoundException(ErrorMessage.HOUSE_NOT_FOUND);
-            }
+
             for (Flat flat : house.flats) {
                 if (flat == null) {
                     throw new FlatNotFoundException(ErrorMessage.FLAT_NOT_FOUND);
