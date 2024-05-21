@@ -16,6 +16,9 @@ public class Team<T extends Participant> {
     private List<T> list = new ArrayList<>();
     private double points;
 
+    private int gameCounter;
+    private int winnerCounter;
+
     public Team(String teamName) {
         this.teamName = teamName;
     }
@@ -25,16 +28,27 @@ public class Team<T extends Participant> {
     }
 
     public void play(Team<T> team) {
-        String winner;
+        String winner = null;
         Random random = new Random();
-        int i = random.nextInt(2);
-        if(i == 0) {
+        int i = random.nextInt(3);
+        if (i == 0) {
             winner = this.teamName;
-            points++;
-        } else {
-            winner = team.teamName;
+            this.points++;
+            this.winnerCounter++;
         }
-
-        System.out.println("WINNER: " + winner);
+        if (i == 1) {
+            winner = team.teamName;
+            team.points++;
+            team.winnerCounter++;
+        }
+        if (i == 2) {
+            winner = "nichya";
+            this.points += 0.5;
+            team.points += 0.5;
+        }
+        this.gameCounter++;
+        team.gameCounter++;
+        System.out.println("WINNER: " + winner );
     }
+
 }

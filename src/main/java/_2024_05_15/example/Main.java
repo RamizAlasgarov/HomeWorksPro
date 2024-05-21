@@ -9,13 +9,7 @@ public class Main {
     private static final Faker FAKER = new Faker();
 
     public static void main(String[] args) {
-        Heandler heandler = new Heandler();
-        Team<Pupil> pupilTeam = new Team<>(heandler.pupilsTeam.toString());
-        Team<Teenager> teenagerTeam = new Team<>(heandler.teenagerTeam.toString());
-        Team<Adult> adultTeam = new Team<>(heandler.adultsTeam.toString());
-        pupilTeam.play(pupilTeam);
-        teenagerTeam.play(teenagerTeam);
-        adultTeam.play(adultTeam);
+
 
 //        Pupil p1 = new Pupil(FAKER.name().firstName(), 9);
 //        Pupil p2 = new Pupil(FAKER.name().firstName(), 9);

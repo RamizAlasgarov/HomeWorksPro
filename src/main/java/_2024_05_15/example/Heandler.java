@@ -1,13 +1,16 @@
 package _2024_05_15.example;
 
 
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
+
 
 /**
  * 3. Написать класс Handler для хранения команд, результатов как хотите и каких хотите DS лишь бы всех данных
  */
 public class Heandler {
-    Set<Team<Pupil>> pupilsTeam = Generator.generate25TeamPupil();
-    Set<Team<Adult>> adultsTeam = Generator.generate25TeamAdults();
-    Set<Team<Teenager>> teenagerTeam = Generator.generate25TeamTeenagers();
+    private static Map<Team<? extends Participant>, Integer> tournamentMap = new HashMap<>();
+    private static Map<Team<? extends Participant>, Integer> tournamentWinGameMap = new HashMap<>();
+
+
 }

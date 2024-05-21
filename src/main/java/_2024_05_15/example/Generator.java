@@ -9,7 +9,7 @@ public class Generator {
     private static final Random random = new Random();
     public static Set<Team<Pupil>> generate25TeamPupil(){
         Set<Team<Pupil>> pupils = new HashSet<>();
-        for (int i = 0; i < 25 ; i++) {
+        for (int i = 0; i < 3 ; i++) {
             Team<Pupil> pupilTeam = new Team<>((FAKER.team().name()));
             pupilTeam.setList(generateFourParticipant());
             pupils.add(pupilTeam);
@@ -19,7 +19,7 @@ public class Generator {
 
     public static Set<Team<Teenager>> generate25TeamTeenagers(){
         Set<Team<Teenager>> teenager = new HashSet<>();
-        for (int i = 0; i < 25; i++) {
+        for (int i = 0; i < 3; i++) {
             Team<Teenager> teenagerTeam = new Team<>(FAKER.team().name());
             teenagerTeam.setList(generateFourTeenager());
             teenager.add(teenagerTeam);
@@ -29,7 +29,7 @@ public class Generator {
 
     public static Set<Team<Adult>> generate25TeamAdults(){
         Set<Team<Adult>> adults = new HashSet<>();
-        for (int i = 0; i < 25; i++) {
+        for (int i = 0; i < 3; i++) {
             Team<Adult> adultTeam = new Team<>(FAKER.team().name());
             adultTeam.setList(generateFourAdult());
             adults.add(adultTeam);
